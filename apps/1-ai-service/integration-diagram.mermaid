@@ -1,0 +1,40 @@
+flowchart TD
+    User[Người dùng] -->|Tải lên CSV/XLSX| Frontend
+    User -->|Gửi câu hỏi| Frontend
+    
+    subgraph Frontend[Frontend - React]
+        Chat[Chat UI]
+        FileUpload[File Upload]
+        Visualization[Visualization]
+        DataSummary[Data Summary]
+    end
+    
+    Frontend -->|File Upload| Backend
+    Frontend -->|Chat Message| Backend
+    
+    subgraph Backend[Backend - Node.js/Express]
+        AnalyzeController[Analyze Controller]
+        ChatController[Chat Controller]
+        VisualizeController[Visualize Controller]
+        AnalyzeService[Analyze Service]
+        VisualizeService[Visualize Service]
+    end
+    
+    Backend -->|Upload File| FileStorage[(File Storage)]
+    Backend -->|Parse & Clean| DataProcessor[Data Processor]
+    Backend -->|Advanced Analysis| MLService
+    Backend -->|Chat Prompt| MLService
+    
+    subgraph MLService[ML Service - Mistral 7B]
+        ModelLoader[Model Loader]
+        Inference[Inference Engine]
+        DataAnalysis[Data Analysis]
+        PredictionEngine[Prediction Engine]
+    end
+    
+    MLService -->|Response| Backend
+    Backend -->|Processed Data + Visualizations| Frontend
+    
+    style Frontend fill:#f9f,stroke:#333,stroke-width:2px
+    style Backend fill:#bbf,stroke:#333,stroke-width:2px
+    style MLService fill:#bfb,stroke:#333,stroke-width:2px

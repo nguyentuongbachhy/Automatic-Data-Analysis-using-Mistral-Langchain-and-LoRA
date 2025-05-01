@@ -1,0 +1,92 @@
+{
+    "model": {
+        "type": "mistral",
+        "base_model_id": "mistralai/Mistral-7B-v0.1",
+        "base_model_path": "models/base",
+        "finetuned_model_path": null,
+        "peft_model_path": "models/lora-intent-detection",
+        "lora_config": {
+            "enabled": true,
+            "r": 8,
+            "lora_alpha": 32,
+            "lora_dropout": 0.05,
+            "target_modules": [
+                "q_proj",
+                "v_proj",
+                "k_proj",
+                "o_proj"
+            ],
+            "intent_detection": {
+                "model_path": "models/lora-intent-detection",
+                "enabled": true,
+                "priority": "high"
+            }
+        },
+        "load_in_4bit": true,
+        "load_in_8bit": false,
+        "use_flash_attention": false,
+        "device": "cuda:0",
+        "lazy_load": true,
+        "use_langchain": true
+    },
+    "inference": {
+        "default_temperature": 0.7,
+        "default_top_p": 0.9,
+        "default_top_k": 50,
+        "default_max_tokens": 2048,
+        "repetition_penalty": 1.15,
+        "cache_enabled": true,
+        "cache_ttl_seconds": 7200,
+        "intent_detection": {
+            "use_rule_based": true,
+            "fallback_to_llm": true,
+            "confidence_threshold": 0.7
+        }
+    },
+    "data_processing": {
+        "max_rows_preview": 200,
+        "max_rows_analysis": 100000,
+        "sample_method": "random",
+        "outlier_threshold": 3,
+        "categorical_threshold": 20,
+        "missing_values_threshold": 0.8,
+        "correlation_threshold": 0.7,
+        "max_file_size_mb": 200
+    },
+    "visualization": {
+        "default_chart_height": 500,
+        "default_chart_width": 800,
+        "color_palette": "tableau10",
+        "max_categories_in_chart": 12,
+        "max_charts_per_insight": 8,
+        "max_points_in_scatter": 5000
+    },
+    "prediction": {
+        "train_test_split": 0.8,
+        "time_series_min_points": 10,
+        "cross_validation_folds": 5,
+        "auto_model_selection": true,
+        "forecast_horizon": 12
+    },
+    "cache": {
+        "enabled": true,
+        "ttl_seconds": 3600,
+        "max_size_mb": 1024,
+        "intent_detection_ttl": 7200,
+        "visualization_ttl": 86400,
+        "cleanup_interval": 300
+    },
+    "upload_dir": "../storage/uploads",
+    "performance": {
+        "max_workers": 4,
+        "batch_size": 10000,
+        "timeout_seconds": 300,
+        "memory_limit_mb": 2048
+    },
+    "logging": {
+        "level": "INFO",
+        "file_path": "logs/app.log",
+        "max_size_mb": 10,
+        "backup_count": 5
+    }
+}

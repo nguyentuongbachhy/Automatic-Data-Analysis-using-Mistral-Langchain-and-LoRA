@@ -1,0 +1,1560 @@
+{
+    "status": "success",
+    "data": {
+        "dataset_info": {
+            "rows": 1094,
+            "columns": 6,
+            "memory_usage_mb": 0.15,
+            "dtypes_summary": {
+                "category": 3,
+                "object": 2,
+                "float32": 1
+            },
+            "column_types": {
+                "id": [],
+                "numeric": [
+                    "boxes_shipped"
+                ],
+                "categorical": [
+                    "sales_person",
+                    "country",
+                    "product",
+                    "amount"
+                ],
+                "datetime": [
+                    "date"
+                ],
+                "boolean": []
+            },
+            "time_range": null,
+            "missing_values": {
+                "count": 0,
+                "percent": 0.0
+            }
+        },
+        "data_quality": {
+            "quality_metrics": {
+                "completeness": {
+                    "score": 100.0,
+                    "missing_cells": 0,
+                    "missing_percent": 0.0,
+                    "columns_with_missing": [],
+                    "problematic_columns": []
+                },
+                "consistency": {
+                    "score": 99.86288848263254,
+                    "inconsistency_count": 9,
+                    "inconsistent_columns": [
+                        {
+                            "column": "date",
+                            "issue": "inconsistent_date_format"
+                        },
+                        {
+                            "column": "boxes_shipped",
+                            "issue": "potential_unit_inconsistency"
+                        }
+                    ]
+                },
+                "uniqueness": {
+                    "score": 80.0,
+                    "duplicate_rows": 0,
+                    "duplicate_percent": 0.0,
+                    "uniqueness_stats": [
+                        {
+                            "column": "amount",
+                            "unique_values": 827,
+                            "unique_percent": 75.59414990859233
+                        },
+                        {
+                            "column": "boxes_shipped",
+                            "unique_values": 384,
+                            "unique_percent": 35.10054844606947
+                        },
+                        {
+                            "column": "date",
+                            "unique_values": 168,
+                            "unique_percent": 15.356489945155394
+                        },
+                        {
+                            "column": "sales_person",
+                            "unique_values": 25,
+                            "unique_percent": 2.2851919561243146
+                        },
+                        {
+                            "column": "product",
+                            "unique_values": 22,
+                            "unique_percent": 2.010968921389397
+                        },
+                        {
+                            "column": "country",
+                            "unique_values": 6,
+                            "unique_percent": 0.5484460694698354
+                        }
+                    ],
+                    "potential_identifiers": []
+                },
+                "integrity": {
+                    "score": 94.90859232175502,
+                    "integrity_issues": [
+                        {
+                            "column": "date",
+                            "issue": "irregular_time_intervals"
+                        }
+                    ],
+                    "outlier_stats": {
+                        "boxes_shipped": {
+                            "outlier_count": 2,
+                            "outlier_percent": 0.18281535648994515
+                        }
+                    },
+                    "range_violations": [],
+                    "date_violations": [
+                        {
+                            "column": "date",
+                            "issue": "irregular_time_intervals",
+                            "details": {
+                                "min_gap_seconds": 0.0,
+                                "max_gap_seconds": 5529600.0,
+                                "mean_gap_seconds": 28985.8064516129,
+                                "median_gap_seconds": 0.0,
+                                "std_gap_seconds": 209378.84483610716,
+                                "coefficient_of_variation": 7.223495581730015,
+                                "regularity": 0,
+                                "most_common_gaps": {
+                                    "0s": 921,
+                                    "86400s": 122,
+                                    "259200s": 32
+                                }
+                            }
+                        }
+                    ]
+                },
+                "accuracy": {
+                    "score": 90,
+                    "accuracy_issues": [
+                        {
+                            "column": "amount",
+                            "issue": "multiple_values_in_cell"
+                        }
+                    ],
+                    "suspect_columns": [
+                        "amount"
+                    ]
+                },
+                "overall_score": 93.95429616087752
+            },
+            "issues": [
+                "Data consistency issues in columns: date, boxes_shipped",
+                "Potential data accuracy issues in columns: amount"
+            ],
+            "recommendations": [
+                "Standardize date formats across the dataset",
+                "Consider adding a unique identifier column for better data tracking",
+                "Optimize memory usage by converting numeric columns to appropriate dtypes"
+            ]
+        },
+        "statistical_analysis": {
+            "numeric_summary": {
+                "boxes_shipped": {
+                    "count": 1094.0,
+                    "mean": 0.0,
+                    "std": 1.0,
+                    "min": -1.32,
+                    "1%": -1.29,
+                    "5%": -1.2,
+                    "25%": -0.76,
+                    "50%": -0.22,
+                    "75%": 0.55,
+                    "95%": 2.04,
+                    "99%": 2.95,
+                    "max": 4.47,
+                    "skewness": 1.1088162660598755,
+                    "kurtosis": 1.138796329498291
+                }
+            },
+            "categorical_summary": {
+                "sales_person": {
+                    "unique_values": 25,
+                    "top_values": {
+                        "Kelci Walkden": 54,
+                        "Brien Boise": 53,
+                        "Van Tuxwell": 51,
+                        "Beverie Moffet": 50,
+                        "Oby Sorrel": 49,
+                        "Dennison Crosswaite": 49,
+                        "Ches Bonnell": 48,
+                        "Gigi Bohling": 47,
+                        "Karlen McCaffrey": 47,
+                        "Curtice Advani": 46
+                    },
+                    "top_values_percent": {
+                        "Kelci Walkden": 4.93601462522852,
+                        "Brien Boise": 4.844606946983546,
+                        "Van Tuxwell": 4.661791590493602,
+                        "Beverie Moffet": 4.570383912248629,
+                        "Oby Sorrel": 4.478976234003657,
+                        "Dennison Crosswaite": 4.478976234003657,
+                        "Ches Bonnell": 4.387568555758683,
+                        "Gigi Bohling": 4.296160877513711,
+                        "Karlen McCaffrey": 4.296160877513711,
+                        "Curtice Advani": 4.204753199268739
+                    },
+                    "mode": "Kelci Walkden"
+                },
+                "country": {
+                    "unique_values": 6,
+                    "top_values": {
+                        "Australia": 205,
+                        "India": 184,
+                        "USA": 179,
+                        "UK": 178,
+                        "Canada": 175,
+                        "New Zealand": 173
+                    },
+                    "top_values_percent": {
+                        "Australia": 18.738574040219376,
+                        "India": 16.819012797074954,
+                        "USA": 16.36197440585009,
+                        "UK": 16.270566727605118,
+                        "Canada": 15.996343692870202,
+                        "New Zealand": 15.813528336380255
+                    },
+                    "mode": "Australia"
+                },
+                "product": {
+                    "unique_values": 22,
+                    "top_values": {
+                        "Eclairs": 60,
+                        "50% Dark Bites": 60,
+                        "Smooth Sliky Salty": 59,
+                        "White Choc": 58,
+                        "Drinking Coco": 56,
+                        "Spicy Special Slims": 54,
+                        "Organic Choco Syrup": 52,
+                        "85% Dark Bars": 50,
+                        "Fruit & Nut Bars": 50,
+                        "After Nines": 50
+                    },
+                    "top_values_percent": {
+                        "Eclairs": 5.484460694698354,
+                        "50% Dark Bites": 5.484460694698354,
+                        "Smooth Sliky Salty": 5.393053016453382,
+                        "White Choc": 5.301645338208409,
+                        "Drinking Coco": 5.118829981718465,
+                        "Spicy Special Slims": 4.93601462522852,
+                        "Organic Choco Syrup": 4.753199268738574,
+                        "85% Dark Bars": 4.570383912248629,
+                        "Fruit & Nut Bars": 4.570383912248629,
+                        "After Nines": 4.570383912248629
+                    },
+                    "mode": "50% Dark Bites"
+                },
+                "amount": {
+                    "unique_values": 827,
+                    "top_values": {
+                        "$2,317 ": 5,
+                        "$3,472 ": 4,
+                        "$6,454 ": 4,
+                        "$5,691 ": 4,
+                        "$4,361 ": 4,
+                        "$2,303 ": 4,
+                        "$7,714 ": 4,
+                        "$3,577 ": 4,
+                        "$3,549 ": 3,
+                        "$4,781 ": 3
+                    },
+                    "top_values_percent": {
+                        "$2,317 ": 0.4570383912248629,
+                        "$3,472 ": 0.3656307129798903,
+                        "$6,454 ": 0.3656307129798903,
+                        "$5,691 ": 0.3656307129798903,
+                        "$4,361 ": 0.3656307129798903,
+                        "$2,303 ": 0.3656307129798903,
+                        "$7,714 ": 0.3656307129798903,
+                        "$3,577 ": 0.3656307129798903,
+                        "$3,549 ": 0.2742230347349177,
+                        "$4,781 ": 0.2742230347349177
+                    },
+                    "mode": "$2,317 "
+                }
+            },
+            "datetime_summary": {
+                "date": {
+                    "min": "2022-01-01T00:00:00",
+                    "max": "2022-12-31T00:00:00",
+                    "range_days": 364.0,
+                    "year_distribution": {
+                        "2022": 1086
+                    },
+                    "month_distribution": {
+                        "1": 163,
+                        "12": 154,
+                        "4": 149,
+                        "11": 133,
+                        "6": 130,
+                        "9": 129,
+                        "5": 118,
+                        "3": 110
+                    }
+                }
+            },
+            "correlation_matrix": {},
+            "group_statistics": [
+                {
+                    "group_by": "country",
+                    "value_column": "boxes_shipped",
+                    "stats": [
+                        {
+                            "country": "Australia",
+                            "mean": -0.021015718579292297,
+                            "median": -0.35231050848960876,
+                            "std": 1.0348206758499146,
+                            "count": 205
+                        },
+                        {
+                            "country": "Canada",
+                            "mean": 0.13659875094890594,
+                            "median": -0.0888490155339241,
+                            "std": 1.159055471420288,
+                            "count": 175
+                        },
+                        {
+                            "country": "India",
+                            "mean": -0.013408102095127106,
+                            "median": -0.21234658360481262,
+                            "std": 1.0064983367919922,
+                            "count": 184
+                        },
+                        {
+                            "country": "New Zealand",
+                            "mean": -0.06710011512041092,
+                            "median": -0.269978791475296,
+                            "std": 0.9702119827270508,
+                            "count": 173
+                        },
+                        {
+                            "country": "UK",
+                            "mean": 0.06781250983476639,
+                            "median": -0.08061584830284119,
+                            "std": 0.8934454321861267,
+                            "count": 178
+                        },
+                        {
+                            "country": "USA",
+                            "mean": -0.09827806800603867,
+                            "median": -0.253512442111969,
+                            "std": 0.9072004556655884,
+                            "count": 179
+                        }
+                    ]
+                }
+            ]
+        },
+        "advanced_analysis": {
+            "performance_analysis": {
+                "memory": {
+                    "total_mb": 0.087249755859375,
+                    "columns": {
+                        "amount": 0.06669998168945312,
+                        "date": 0.0083465576171875,
+                        "boxes_shipped": 0.00417327880859375,
+                        "sales_person": 0.00325775146484375,
+                        "product": 0.003082275390625,
+                        "country": 0.001567840576171875,
+                        "Index": 0.0001220703125
+                    }
+                },
+                "processing": {
+                    "boxes_shipped": 0.047332763671875,
+                    "amount": 0.01529693603515625,
+                    "product": 0.00646662712097168,
+                    "country": 0.003815889358520508,
+                    "sales_person": 0.0013477802276611328,
+                    "date": 4.8160552978515625e-05
+                },
+                "recommendations": []
+            },
+            "dimensionality_reduction": {},
+            "feature_importance": {
+                "important_features": [
+                    "boxes_shipped"
+                ],
+                "importance_scores": {
+                    "boxes_shipped": 1.0
+                }
+            },
+            "clustering": {}
+        },
+        "insights": [
+            {
+                "id": "44f9d8cd-e941-4a84-8d44-700687af5e07",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "summary",
+                "title": "Dataset Overview",
+                "content": "This dataset contains 1094 rows and 6 columns. It has 1 numeric columns, 4 categorical columns, and 1 datetime columns. There are 8 missing values (0.1% of all data). The data spans from 2022-01-01 to 2022-12-31.",
+                "importance": 10.0,
+                "columns": [],
+                "related_charts": [],
+                "metadata": {}
+            },
+            {
+                "id": "d5753a5e-2909-4916-ad8b-4777856ede17",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "trend",
+                "title": "Trend in boxes_shipped over Time",
+                "content": "The boxes_shipped shows a decreasing trend over time. Over the analyzed time period, there was a 200.0% decreasing trend.",
+                "importance": 9.0,
+                "columns": [
+                    "date",
+                    "boxes_shipped"
+                ],
+                "related_charts": [],
+                "metadata": {}
+            },
+            {
+                "id": "365110aa-866b-4879-b5a5-eaf4ba98f43a",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "distribution",
+                "title": "Distribution of boxes_shipped",
+                "content": "The boxes_shipped variable has an average of 0.00 and a median of -0.22. It appears to be right-skewed (skewness: 1.11). There are 26 outliers (2.4% of the data).",
+                "importance": 7.0,
+                "columns": [
+                    "boxes_shipped"
+                ],
+                "related_charts": [],
+                "metadata": {}
+            },
+            {
+                "id": "83ec2c8b-79e9-4438-87e7-d2b830126101",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "outlier",
+                "title": "Outliers in boxes_shipped",
+                "content": "The boxes_shipped variable has 26 outliers (2.4% of data). There are 0 values below -2.72 and 26 values above 2.51. The highest outlier is 4.47. ",
+                "importance": 6.0,
+                "columns": [
+                    "boxes_shipped"
+                ],
+                "related_charts": [],
+                "metadata": {}
+            }
+        ],
+        "visualizations": [
+            {
+                "id": "a9be25ef-53ea-48d0-99af-5b541c4ba105",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "histogram",
+                "title": "Distribution chart of boxes shipped",
+                "description": "Histogram showing the distribution of values for boxes_shipped",
+                "data": [
+                    {
+                        "bin": "-1.32 - -0.94",
+                        "frequency": 182,
+                        "midpoint": -1.1306196451187134
+                    },
+                    {
+                        "bin": "-0.94 - -0.55",
+                        "frequency": 200,
+                        "midpoint": -0.7442094087600708
+                    },
+                    {
+                        "bin": "-0.55 - -0.16",
+                        "frequency": 198,
+                        "midpoint": -0.3577992618083954
+                    },
+                    {
+                        "bin": "-0.16 - 0.22",
+                        "frequency": 160,
+                        "midpoint": 0.028610944747924805
+                    },
+                    {
+                        "bin": "0.22 - 0.61",
+                        "frequency": 97,
+                        "midpoint": 0.4150211811065674
+                    },
+                    {
+                        "bin": "0.61 - 0.99",
+                        "frequency": 79,
+                        "midpoint": 0.8014313578605652
+                    },
+                    {
+                        "bin": "0.99 - 1.38",
+                        "frequency": 66,
+                        "midpoint": 1.187841534614563
+                    },
+                    {
+                        "bin": "1.38 - 1.77",
+                        "frequency": 34,
+                        "midpoint": 1.5742517709732056
+                    },
+                    {
+                        "bin": "1.77 - 2.15",
+                        "frequency": 38,
+                        "midpoint": 1.9606621265411377
+                    },
+                    {
+                        "bin": "2.15 - 2.54",
+                        "frequency": 17,
+                        "midpoint": 2.3470723628997803
+                    },
+                    {
+                        "bin": "2.54 - 2.93",
+                        "frequency": 8,
+                        "midpoint": 2.7334823608398438
+                    },
+                    {
+                        "bin": "2.93 - 3.31",
+                        "frequency": 9,
+                        "midpoint": 3.1198923587799072
+                    },
+                    {
+                        "bin": "3.31 - 3.70",
+                        "frequency": 3,
+                        "midpoint": 3.50630259513855
+                    },
+                    {
+                        "bin": "3.70 - 4.09",
+                        "frequency": 1,
+                        "midpoint": 3.8927128314971924
+                    },
+                    {
+                        "bin": "4.09 - 4.47",
+                        "frequency": 2,
+                        "midpoint": 4.279123306274414
+                    }
+                ],
+                "config": {
+                    "xAxis": {
+                        "key": "midpoint",
+                        "name": "boxes_shipped",
+                        "type": "number"
+                    },
+                    "yAxis": {
+                        "key": "frequency",
+                        "name": "Frequency"
+                    },
+                    "height": 400,
+                    "width": 600,
+                    "showMean": true,
+                    "showMedian": true,
+                    "meanValue": 0.0,
+                    "medianValue": -0.22057975828647614
+                },
+                "insight": "The distribution of boxes_shipped has a mean of 0.00 and median of -0.22. It shows a multi-modal distribution with 3 peaks. It is right-skewed (positive skew) with a skewness of 1.11.",
+                "recommendedType": null,
+                "relatedInsights": [],
+                "isCustom": false
+            },
+            {
+                "id": "db050c5d-b4cb-47b3-abc8-fa10faabb14c",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "pie",
+                "title": "Pie chart of country",
+                "description": "Pie chart showing the distribution of categories for country",
+                "data": [
+                    {
+                        "name": "Australia",
+                        "value": 205,
+                        "percent": 18.738574040219376
+                    },
+                    {
+                        "name": "India",
+                        "value": 184,
+                        "percent": 16.819012797074954
+                    },
+                    {
+                        "name": "USA",
+                        "value": 179,
+                        "percent": 16.36197440585009
+                    },
+                    {
+                        "name": "UK",
+                        "value": 178,
+                        "percent": 16.270566727605118
+                    },
+                    {
+                        "name": "Canada",
+                        "value": 175,
+                        "percent": 15.996343692870202
+                    },
+                    {
+                        "name": "New Zealand",
+                        "value": 173,
+                        "percent": 15.813528336380255
+                    }
+                ],
+                "config": {
+                    "nameKey": "name",
+                    "valueKey": "value",
+                    "percentKey": "percent",
+                    "height": 400,
+                    "width": 500,
+                    "showPercentages": true,
+                    "entropy": 2.582540511725611,
+                    "normalizedEntropy": 0.9990630467579822
+                },
+                "insight": "The top 2 categories in country are 'Australia' (18.7%) and 'India' (16.8%), together making up 35.5% of all data. The distribution is very balanced (normalized entropy: 1.00).",
+                "recommendedType": null,
+                "relatedInsights": [],
+                "isCustom": false
+            },
+            {
+                "id": "1bd9c463-d09e-4f87-8dc3-ecfbe7b751e2",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "bar",
+                "title": "Categorical chart of country",
+                "description": "Bar chart showing the distribution of categories for country",
+                "data": [
+                    {
+                        "category": "Australia",
+                        "value": 205,
+                        "percent": 18.738574040219376
+                    },
+                    {
+                        "category": "India",
+                        "value": 184,
+                        "percent": 16.819012797074954
+                    },
+                    {
+                        "category": "USA",
+                        "value": 179,
+                        "percent": 16.36197440585009
+                    },
+                    {
+                        "category": "UK",
+                        "value": 178,
+                        "percent": 16.270566727605118
+                    },
+                    {
+                        "category": "Canada",
+                        "value": 175,
+                        "percent": 15.996343692870202
+                    },
+                    {
+                        "category": "New Zealand",
+                        "value": 173,
+                        "percent": 15.813528336380255
+                    }
+                ],
+                "config": {
+                    "xAxis": {
+                        "key": "category",
+                        "name": "country"
+                    },
+                    "yAxis": {
+                        "key": "value",
+                        "name": "Count"
+                    },
+                    "height": 400,
+                    "width": 600,
+                    "showPercentages": true,
+                    "percentKey": "percent"
+                },
+                "insight": "The category 'Australia' represents 18.7% of all data in country. There are 6 distinct categories in total. The distribution is balanced across categories (entropy: 2.58).",
+                "recommendedType": null,
+                "relatedInsights": [],
+                "isCustom": false
+            },
+            {
+                "id": "5e7001aa-8a3c-4176-a113-17db5ada92c9",
+                "fileId": "Time Series visualization of date",
+                "type": "line",
+                "title": "boxes_shipped theo thời gian",
+                "description": "Biểu đồ time series cho boxes_shipped (tổng hợp def9a814-414a-4208-9cc2-825182ef81c6)",
+                "data": [
+                    {
+                        "time": "2022-01-31T00:00:00",
+                        "value": -0.005860668607056141
+                    },
+                    {
+                        "time": "2022-03-31T00:00:00",
+                        "value": 0.01631103828549385
+                    },
+                    {
+                        "time": "2022-04-30T00:00:00",
+                        "value": -0.06801743805408478
+                    },
+                    {
+                        "time": "2022-05-31T00:00:00",
+                        "value": 0.1333768367767334
+                    },
+                    {
+                        "time": "2022-06-30T00:00:00",
+                        "value": -0.10449203848838806
+                    },
+                    {
+                        "time": "2022-09-30T00:00:00",
+                        "value": 0.010395802557468414
+                    },
+                    {
+                        "time": "2022-11-30T00:00:00",
+                        "value": -0.10859624296426773
+                    },
+                    {
+                        "time": "2022-12-31T00:00:00",
+                        "value": 0.1398620754480362
+                    }
+                ],
+                "config": {
+                    "xAxis": {
+                        "key": "time",
+                        "name": "date"
+                    },
+                    "yAxis": {
+                        "key": "value",
+                        "name": "boxes_shipped"
+                    },
+                    "height": 400,
+                    "width": 800,
+                    "showTrend": true,
+                    "showPoints": true,
+                    "seasonality": false
+                },
+                "insight": "Dữ liệu boxes_shipped theo thời gian cho thấy xu hướng tăng (342.1%). Dữ liệu được tổng hợp def9a814-414a-4208-9cc2-825182ef81c6.",
+                "recommendedType": null,
+                "relatedInsights": [],
+                "isCustom": false
+            },
+            {
+                "id": "b9e5b050-775d-4051-81fb-241d89fedbb4",
+                "fileId": "def9a814-414a-4208-9cc2-825182ef81c6",
+                "type": "bar",
+                "title": "Group chart of country and boxes shipped",
+                "description": "Bar chart showing average boxes_shipped for each country category",
+                "data": [
+                    {
+                        "category": "Canada",
+                        "value": 0.13659875094890594,
+                        "std": 1.159055471420288,
+                        "median": -0.0888490155339241,
+                        "count": 175
+                    },
+                    {
+                        "category": "UK",
+                        "value": 0.06781250983476639,
+                        "std": 0.8934454321861267,
+                        "median": -0.08061584830284119,
+                        "count": 178
+                    },
+                    {
+                        "category": "India",
+                        "value": -0.013408102095127106,
+                        "std": 1.0064983367919922,
+                        "median": -0.21234658360481262,
+                        "count": 184
+                    },
+                    {
+                        "category": "Australia",
+                        "value": -0.021015718579292297,
+                        "std": 1.0348206758499146,
+                        "median": -0.35231050848960876,
+                        "count": 205
+                    },
+                    {
+                        "category": "New Zealand",
+                        "value": -0.06710011512041092,
+                        "std": 0.9702119827270508,
+                        "median": -0.269978791475296,
+                        "count": 173
+                    },
+                    {
+                        "category": "USA",
+                        "value": -0.09827806800603867,
+                        "std": 0.9072004556655884,
+                        "median": -0.253512442111969,
+                        "count": 179
+                    }
+                ],
+                "config": {
+                    "xAxis": {
+                        "key": "category",
+                        "name": "country"
+                    },
+                    "yAxis": {
+                        "key": "value",
+                        "name": "Average boxes_shipped"
+                    },
+                    "height": 400,
+                    "width": 600,
+                    "showErrorBars": true,
+                    "errorKey": "std",
+                    "showMedian": true,
+                    "medianKey": "median",
+                    "hasSignificantDiff": false,
+                    "pValue": 0.2432534098625183
+                },
+                "insight": "The average boxes_shipped is highest for Canada (0.14) and lowest for USA (-0.10). The difference between groups is not statistically significant (p-value: 0.2433).",
+                "recommendedType": null,
+                "relatedInsights": [],
+                "isCustom": false
+            }
+        ],
+        "recommendations": [
+            "Standardize date formats across the dataset",
+            "Consider adding a unique identifier column for better data tracking",
+            "Optimize memory usage by converting numeric columns to appropriate dtypes",
+            "Create lag features for time series analysis to capture temporal patterns",
+            "Consider time series analysis using the datetime column(s): date",
+            "Create distribution plots (histograms, box plots) to better understand the data patterns",
+            "Perform group analysis to compare metrics across different categories"
+        ],
+        "performance_metrics": {
+            "memory_optimization": {
+                "before_mb": 0.15,
+                "after_mb": 0.15,
+                "reduction_percent": 2.75
+            },
+            "dataset_info_time": 0.031,
+            "data_processing_time": 1.95,
+            "quality_assessment_time": 2.093,
+            "statistical_analysis_time": 0.412,
+            "advanced_analysis_time": 0.404,
+            "time_series_analysis_time": 4.355,
+            "insights_generation_time": 0.015,
+            "visualizations_generation_time": 0.064,
+            "total_execution_time": 6.644
+        },
+        "time_series_analysis": {
+            "analyses": [
+                {
+                    "time_series_info": {
+                        "original_length": 1086,
+                        "resampled_length": 8737,
+                        "frequency": "h",
+                        "start_date": "2022-01-01T00:00:00",
+                        "end_date": "2022-12-31T00:00:00",
+                        "date_range_days": 364
+                    },
+                    "statistics": {
+                        "mean": -0.003028825158253312,
+                        "std": 0.407952219247818,
+                        "min": -1.2991251945495605,
+                        "max": 1.5248526334762573,
+                        "median": -0.024202194064855576,
+                        "skewness": 0.1811811923980713,
+                        "kurtosis": -0.3174822926521301
+                    },
+                    "outliers": {
+                        "has_outliers": true,
+                        "outlier_count": 437,
+                        "outlier_percent": 5.001716836442715,
+                        "z_score_outliers": 24,
+                        "iqr_outliers": 34,
+                        "max_outlier_value": 1.5248526334762573,
+                        "min_outlier_value": -1.2991251945495605,
+                        "top_outliers": {
+                            "2022-01-04T18:00:00": -0.6783212423324585,
+                            "2022-01-04T19:00:00": -0.6797125339508057,
+                            "2022-01-04T20:00:00": -0.6811037659645081,
+                            "2022-01-04T21:00:00": -0.6824949979782104,
+                            "2022-01-04T22:00:00": -0.6838862895965576,
+                            "2022-01-04T23:00:00": -0.68527752161026,
+                            "2022-01-05T00:00:00": -0.6866687536239624,
+                            "2022-01-05T01:00:00": -0.6880600452423096,
+                            "2022-01-05T02:00:00": -0.689451277256012,
+                            "2022-01-05T03:00:00": -0.6908425092697144
+                        }
+                    },
+                    "stationarity": {
+                        "is_stationary": true,
+                        "adf_test": {
+                            "adf_statistic": -6.93934152951049,
+                            "p_value": 1.0347493480240892e-09,
+                            "critical_values": {
+                                "1%": -3.431101952028598,
+                                "5%": -2.861872312593601,
+                                "10%": -2.56694688503399
+                            }
+                        },
+                        "homoscedastic": true,
+                        "variance_ratio": 2.3893795013427734,
+                        "recommendation": "The time series is stationary based on statistical tests."
+                    },
+                    "decomposition": {
+                        "has_seasonality": false,
+                        "has_trend": true,
+                        "seasonality_strength": 0.0005986221422351612,
+                        "trend_strength": 0.9997649681794698,
+                        "trend_direction": "no significant direction",
+                        "components": {
+                            "trend": [
+                                -0.13001488004716075,
+                                -0.12859367757883608,
+                                -0.1271724751105114,
+                                -0.12575127290827887,
+                                -0.12433007040194102,
+                                -0.12290886683123452,
+                                -0.12148766538926532,
+                                -0.12006646288292748,
+                                -0.11864526037658964,
+                                -0.1172240578702518,
+                                -0.11580285536391394,
+                                -0.1143816528575761,
+                                -0.11296045035123825,
+                                -0.11153924784490041,
+                                -0.11011804533856255,
+                                -0.1086968428322247,
+                                -0.10727564032588685,
+                                -0.10585443781954901,
+                                -0.10443323531321116,
+                                -0.10301203280687332,
+                                -0.10159083030053548,
+                                -0.10016962779419762,
+                                -0.10207039756434302,
+                                -0.10729314067534038,
+                                -0.11583785606282097,
+                                -0.1277045447911535,
+                                -0.14289320792470658,
+                                -0.16140384227037427,
+                                -0.18323644889252524,
+                                -0.20506905657904487,
+                                -0.22690166532993314,
+                                -0.24873427620955874,
+                                -0.2705668828317097,
+                                -0.2923994894538607,
+                                -0.314232098204749,
+                                -0.33606470482689993,
+                                -0.3578973114490509,
+                                -0.3797299180712018,
+                                -0.4015625246933528,
+                                -0.4233951355729784,
+                                -0.4452277421951294,
+                                -0.46706035307475496,
+                                -0.48889296395438053,
+                                -0.5107255705765315,
+                                -0.5325581814561571,
+                                -0.5543907880783081,
+                                -0.5733031971114022,
+                                -0.5892954213278634,
+                                -0.6023674436977932,
+                                -0.6125192727361406,
+                                -0.6197509169578552,
+                                -0.6240623593330382,
+                                -0.6254536168915884,
+                                -0.6268448744501386,
+                                -0.6282361234937395,
+                                -0.6296273810522897,
+                                -0.6310186386108397,
+                                -0.6324098876544407,
+                                -0.6338011452129908,
+                                -0.6351923942565918,
+                                -0.6365836433001926,
+                                -0.6379749008587429,
+                                -0.6393661499023438,
+                                -0.6407574074608938,
+                                -0.6421486650194439,
+                                -0.6435399140630449,
+                                -0.6449311716215951,
+                                -0.6463224291801453,
+                                -0.6477136782237461,
+                                -0.6491049357822962,
+                                -0.6504961848258971,
+                                -0.6518874338694981,
+                                -0.6532786914280483,
+                                -0.6546699404716492,
+                                -0.6560611895152499,
+                                -0.6574524470738002,
+                                -0.658843696117401,
+                                -0.6602349536759512,
+                                -0.6616262112345014,
+                                -0.6630174602781023,
+                                -0.6644087178366525,
+                                -0.6657999753952025,
+                                -0.6671912244388035,
+                                -0.6685824819973536,
+                                -0.6699737310409546,
+                                -0.6713649800845554,
+                                -0.6727562376431057,
+                                -0.6741474866867065,
+                                -0.6755387442452566,
+                                -0.6769300018038067,
+                                -0.6783212508474077,
+                                -0.6797125084059579,
+                                -0.6811037659645081,
+                                -0.6824950150081089,
+                                -0.683886272566659,
+                                -0.6852775216102599,
+                                -0.6866687706538609,
+                                -0.6880600282124111,
+                                -0.689451277256012,
+                                -0.6908425262996127
+                            ],
+                            "seasonal": [
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05,
+                                -0.00018757438437944134,
+                                -0.00017542462467630003,
+                                -0.000111248251072846,
+                                5.669600244636494e-05,
+                                0.00024196868506625057,
+                                0.0001528830961558373,
+                                2.2699476460134544e-05
+                            ],
+                            "residual": [
+                                -0.0001528845406561622,
+                                -2.2705140421906362e-05,
+                                0.00018757940211741646,
+                                0.0001754256890449488,
+                                0.00011124505796687193,
+                                -5.6697066815027594e-05,
+                                -0.00024196549196029037,
+                                -0.00015288416052449994,
+                                -2.269734772282312e-05,
+                                0.00018757225564212991,
+                                0.0001754256890449488,
+                                0.00011124505796687193,
+                                -5.669600244636494e-05,
+                                -0.0002419654919602765,
+                                -0.00015288416052449994,
+                                -2.2697347722836998e-05,
+                                0.00018757225564211604,
+                                0.0001754256890449488,
+                                0.00011124505796687193,
+                                -5.669600244636494e-05,
+                                -0.0002419654919602765,
+                                -0.00015288416052449994,
+                                0.0032992749287604223,
+                                0.01015349014946057,
+                                0.020107261476681845,
+                                0.0100771661448913,
+                                0.003265277338405543,
+                                -0.0002419612344856814,
+                                -0.00015288416052451382,
+                                -2.2707991409407997e-05,
+                                0.00018757438437941358,
+                                0.00017543526836284328,
+                                0.00011125037981014355,
+                                -5.6702388658313093e-05,
+                                -0.00024198145749009136,
+                                -0.0001528745812065916,
+                                -2.2699476460134544e-05,
+                                0.00018756586943014013,
+                                0.00017543739710014082,
+                                0.0001112567660220917,
+                                -5.669600244636494e-05,
+                                -0.00024197294254090117,
+                                -0.0001528916111051385,
+                                -2.2686704036349265e-05,
+                                0.00018755309700624383,
+                                0.00017542462467630003,
+                                -0.002808928050610884,
+                                -0.00881729302709152,
+                                -0.017763128674559467,
+                                -0.008913446061004011,
+                                -0.0029429098379408474,
+                                0.00018757438437933032,
+                                0.0001754501695239816,
+                                0.0001112397361235448,
+                                -5.668748749717476e-05,
+                                -0.00024199422991404317,
+                                -0.0001528830961559483,
+                                -2.268244656164315e-05,
+                                0.00018755735448083892,
+                                0.00017542462467630003,
+                                0.00011126528097122637,
+                                -5.671303234485634e-05,
+                                -0.00024196868506625057,
+                                -0.0001528575513081557,
+                                -2.2707991409546775e-05,
+                                0.00018758289932863152,
+                                0.00017539907982850743,
+                                0.000111248251072846,
+                                -5.667897254787355e-05,
+                                -0.00024198571496485298,
+                                -0.0001528830961559483,
+                                -2.268244656164315e-05,
+                                0.00018755735448094994,
+                                0.00017542462467630003,
+                                0.00011126528097122637,
+                                -5.671303234485634e-05,
+                                -0.0002419686850663616,
+                                -0.0001528575513081557,
+                                -2.2707991409435752e-05,
+                                0.00018758289932863152,
+                                0.00017539907982850743,
+                                0.00011124825107273498,
+                                -5.667897254787355e-05,
+                                -0.00024198571496485298,
+                                -0.0001528830961558373,
+                                -2.2682446561754172e-05,
+                                0.00018755735448094994,
+                                0.00017542462467630003,
+                                0.00011127379592052758,
+                                -5.670451739577717e-05,
+                                -0.00024196017011706038,
+                                -0.0001529086410036299,
+                                -2.2699476460134544e-05,
+                                0.00018759141427793273,
+                                0.00017540759477769762,
+                                0.00011124825107273498,
+                                -5.667897254787355e-05,
+                                -0.00024198571496474196,
+                                -0.0001528830961558373,
+                                -2.2682446561754172e-05
+                            ]
+                        },
+                        "insight": "The time series has a trend component (strength: 1.00) without clear direction and does not show significant seasonality. This suggests a time series with long-term directional movement but lacking regular cycles."
+                    },
+                    "autocorrelation": {
+                        "acf": [
+                            1.0,
+                            0.9990719088507973,
+                            0.9964365895893136,
+                            0.9921969310678647,
+                            0.9864558221477077,
+                            0.9793161517081617,
+                            0.9708808086142824,
+                            0.9612526817285216,
+                            0.950534659897008,
+                            0.9388296319892794,
+                            0.9262404868611009,
+                            0.9128701133780941,
+                            0.8988214004020106,
+                            0.8841972367929298,
+                            0.8691005114186243,
+                            0.8536341131367778,
+                            0.8379009308164426,
+                            0.8220038533199846,
+                            0.8060457695069255,
+                            0.7901295682324235,
+                            0.7743581383539593,
+                            0.75883436874017,
+                            0.7436611482580445,
+                            0.7289413657702688,
+                            0.7147779101265743,
+                            0.7012736701997735,
+                            0.6883983973863611,
+                            0.6761238741440855,
+                            0.664421882927048,
+                            0.6532642061649393,
+                            0.6426226263116174,
+                            0.6324689258149749,
+                            0.6227748871247195,
+                            0.6135122926885138,
+                            0.604652924951262,
+                            0.5961685663694358,
+                            0.5880309993882626,
+                            0.580212006464691,
+                            0.5726833700398477,
+                            0.565416872563174,
+                            0.5583842964762472
+                        ],
+                        "pacf": [
+                            1.0,
+                            0.9990719088507973,
+                            -0.9206436599874754,
+                            -0.13186282118740744,
+                            -0.008087199632295929,
+                            0.012875026694970466,
+                            0.017591899434777545,
+                            0.019790605198587278,
+                            0.021650496885862517,
+                            0.0235217703605956,
+                            0.025465025288998664,
+                            0.02749689677241329,
+                            0.02962771024189979,
+                            0.031868811430890424,
+                            0.03423353044776164,
+                            0.03673779932133434,
+                            0.039401260943301014,
+                            0.042247383963895976,
+                            0.04530527597055116,
+                            0.04861057030262851,
+                            0.052207565747044105,
+                            0.056151683364972865,
+                            0.060512976747745494,
+                            0.06538139493479057,
+                            0.07087373933067476,
+                            0.07714465431403777,
+                            -0.4144921640697516,
+                            -0.15389272483527464,
+                            -0.041857168473957554,
+                            -0.0040022975078494285,
+                            0.008222900642093075,
+                            0.012430338419878452,
+                            0.014221751274888915,
+                            0.015304591417019025,
+                            0.01619172307172567,
+                            0.01703757507834231,
+                            0.01788875830966629,
+                            0.018760768357717342,
+                            0.01965923860317462,
+                            0.020587622094220152,
+                            0.02154853789689655
+                        ],
+                        "significant_acf_lags": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            13,
+                            14,
+                            15,
+                            16,
+                            17,
+                            18,
+                            19,
+                            20,
+                            21,
+                            22,
+                            23,
+                            24,
+                            25,
+                            26,
+                            27,
+                            28,
+                            29,
+                            30,
+                            31,
+                            32,
+                            33,
+                            34,
+                            35,
+                            36,
+                            37,
+                            38,
+                            39,
+                            40
+                        ],
+                        "significant_pacf_lags": [
+                            1,
+                            2,
+                            3,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            13,
+                            14,
+                            15,
+                            16,
+                            17,
+                            18,
+                            19,
+                            20,
+                            21,
+                            22,
+                            23,
+                            24,
+                            25,
+                            26,
+                            27,
+                            28,
+                            40
+                        ],
+                        "confidence_limit": 0.020968864026350315,
+                        "suggested_ar_order": 4,
+                        "suggested_ma_order": 0,
+                        "insight": "Significant autocorrelation detected at lags: 1, 2, 3, 4, 5 and 35 more. This suggests the presence of a pattern or dependency in the data.",
+                        "model_suggestion": "Based on ACF/PACF analysis, an ARIMA(4,d,0) model might be appropriate, where d depends on stationarity."
+                    },
+                    "changepoints": {
+                        "has_changepoints": true,
+                        "changepoint_count": 30,
+                        "changepoints": [
+                            {
+                                "index": 3135,
+                                "date": "2022-05-11T15:00:00",
+                                "value": 0.03582476079463959,
+                                "magnitude": 1.2228565216064453,
+                                "percent_change": 150.2703094482422
+                            },
+                            {
+                                "index": 6445,
+                                "date": "2022-09-26T13:00:00",
+                                "value": 0.0704285278916359,
+                                "magnitude": 1.0857988595962524,
+                                "percent_change": 149.6395721435547
+                            },
+                            {
+                                "index": 6270,
+                                "date": "2022-09-19T06:00:00",
+                                "value": -0.19217532873153687,
+                                "magnitude": 1.0720841884613037,
+                                "percent_change": 285.8395690917969
+                            },
+                            {
+                                "index": 6500,
+                                "date": "2022-09-28T20:00:00",
+                                "value": 0.20880554616451263,
+                                "magnitude": 1.0520769357681274,
+                                "percent_change": 292.0898742675781
+                            },
+                            {
+                                "index": 425,
+                                "date": "2022-01-18T17:00:00",
+                                "value": 0.6595945954322815,
+                                "magnitude": 0.9158440828323364,
+                                "percent_change": 83.1370849609375
+                            }
+                        ],
+                        "method": "PELT algorithm",
+                        "insight": "A significant change point was detected at 2022-05-11T15:00:00 with a 150.3% change. In total, 30 change points were identified."
+                    },
+                    "periodicity": {
+                        "has_periodicity": true,
+                        "periods": [
+                            2184.25,
+                            794.2727272727273,
+                            198.5681818181818
+                        ],
+                        "dominant_period": 2184.25,
+                        "peak_powers": [
+                            253.8960723876953,
+                            76.80786895751953,
+                            35.76231002807617
+                        ],
+                        "insight": "The time series shows a dominant periodicity of approximately 2184.2 time units. Secondary periodicities were detected at 794.3, 198.6 time units."
+                    },
+                    "recommendations": [
+                        "ARIMA with appropriate differencing is suitable for capturing the trend in this time series.",
+                        "The time series contains structural changes. Consider using piecewise models or including regime variables.",
+                        "The detected periodicity should be incorporated into the modeling approach, possibly using Fourier terms.",
+                        "Consider treating outliers before modeling to improve forecast accuracy.",
+                        "If available, include relevant external variables to improve forecast accuracy.",
+                        "Use time series cross-validation techniques to evaluate model performance more reliably."
+                    ],
+                    "date_column": "date",
+                    "value_column": "boxes_shipped",
+                    "suggested_frequency": "secondly",
+                    "seasonality_info": {
+                        "detected": true,
+                        "day_of_week": {
+                            "counts": {
+                                "0": 134,
+                                "1": 149,
+                                "2": 136,
+                                "3": 182,
+                                "4": 193,
+                                "5": 147,
+                                "6": 145
+                            },
+                            "variation": 0.1482704766693948
+                        },
+                        "month": {
+                            "counts": {
+                                "1": 163,
+                                "3": 110,
+                                "4": 149,
+                                "5": 118,
+                                "6": 130,
+                                "9": 129,
+                                "11": 133,
+                                "12": 154
+                            },
+                            "variation": 0.13397801356303168
+                        },
+                        "quarter": {
+                            "counts": {
+                                "1": 273,
+                                "2": 397,
+                                "3": 129,
+                                "4": 287
+                            },
+                            "variation": 0.40515095704622384,
+                            "has_pattern": true,
+                            "peak_quarters": [
+                                2,
+                                4
+                            ]
+                        }
+                    }
+                }
+            ],
+            "datetime_insights": {
+                "date": {
+                    "range_days": 364.0,
+                    "distributions": {
+                        "year": {
+                            "2022": 1086
+                        },
+                        "month": {
+                            "1": 163,
+                            "3": 110,
+                            "4": 149,
+                            "5": 118,
+                            "6": 130,
+                            "9": 129,
+                            "11": 133,
+                            "12": 154
+                        },
+                        "day_of_week": {
+                            "0": 134,
+                            "1": 149,
+                            "2": 136,
+                            "3": 182,
+                            "4": 193,
+                            "5": 147,
+                            "6": 145
+                        }
+                    },
+                    "time_gaps": {
+                        "min_gap_seconds": 0.0,
+                        "max_gap_seconds": 5529600.0,
+                        "mean_gap_seconds": 28985.8064516129,
+                        "median_gap_seconds": 0.0,
+                        "std_gap_seconds": 209378.84483610716,
+                        "coefficient_of_variation": 7.223495581730015,
+                        "regularity": 0,
+                        "most_common_gaps": {
+                            "0s": 921,
+                            "86400s": 122,
+                            "259200s": 32
+                        }
+                    },
+                    "suggested_frequency": "secondly",
+                    "seasonality": {
+                        "detected": true,
+                        "day_of_week": {
+                            "counts": {
+                                "0": 134,
+                                "1": 149,
+                                "2": 136,
+                                "3": 182,
+                                "4": 193,
+                                "5": 147,
+                                "6": 145
+                            },
+                            "variation": 0.1482704766693948
+                        },
+                        "month": {
+                            "counts": {
+                                "1": 163,
+                                "3": 110,
+                                "4": 149,
+                                "5": 118,
+                                "6": 130,
+                                "9": 129,
+                                "11": 133,
+                                "12": 154
+                            },
+                            "variation": 0.13397801356303168
+                        },
+                        "quarter": {
+                            "counts": {
+                                "1": 273,
+                                "2": 397,
+                                "3": 129,
+                                "4": 287
+                            },
+                            "variation": 0.40515095704622384,
+                            "has_pattern": true,
+                            "peak_quarters": [
+                                2,
+                                4
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "error": null,
+    "meta": {
+        "analysis_type": "full",
+        "rows_analyzed": 1094,
+        "columns_analyzed": 6,
+        "insight_count": 4,
+        "visualization_count": 5,
+        "used_ml": false
+    }
+}

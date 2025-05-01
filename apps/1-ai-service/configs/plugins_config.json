@@ -1,0 +1,114 @@
+{
+    "plugins": {
+        "enabled": [
+            "bar",
+            "line",
+            "scatter",
+            "pie"
+        ],
+        "custom_paths": [],
+        "default_order": [
+            "bar",
+            "line",
+            "scatter",
+            "pie"
+        ]
+    },
+    "chart_defaults": {
+        "bar": {
+            "max_categories": 15,
+            "height": 400,
+            "width": 600,
+            "barCategoryGap": "10%",
+            "showLegend": true,
+            "sortByValue": true
+        },
+        "line": {
+            "height": 400,
+            "width": 800,
+            "showLegend": true,
+            "smooth": false,
+            "showPoints": true,
+            "connectNulls": false
+        },
+        "scatter": {
+            "height": 400,
+            "width": 600,
+            "max_points": 5000,
+            "showLegend": true,
+            "dotSize": 5,
+            "opacity": 0.7
+        },
+        "pie": {
+            "height": 400,
+            "width": 500,
+            "max_categories": 8,
+            "innerRadius": 0,
+            "showLabels": true,
+            "showLegend": true,
+            "labelPosition": "outside"
+        }
+    },
+    "visualization": {
+        "color_schemes": {
+            "default": [
+                "#1f77b4",
+                "#ff7f0e",
+                "#2ca02c",
+                "#d62728",
+                "#9467bd",
+                "#8c564b",
+                "#e377c2",
+                "#7f7f7f",
+                "#bcbd22",
+                "#17becf"
+            ],
+            "categorical": [
+                "#4e79a7",
+                "#f28e2c",
+                "#e15759",
+                "#76b7b2",
+                "#59a14f",
+                "#edc949",
+                "#af7aa1",
+                "#ff9da7",
+                "#9c755f",
+                "#bab0ab"
+            ],
+            "sequential": [
+                "#deebf7",
+                "#c6dbef",
+                "#9ecae1",
+                "#6baed6",
+                "#4292c6",
+                "#2171b5",
+                "#08519c"
+            ],
+            "diverging": [
+                "#d8b365",
+                "#f5f5f5",
+                "#5ab4ac"
+            ]
+        },
+        "theme": "light",
+        "default_margins": {
+            "top": 20,
+            "right": 30,
+            "bottom": 60,
+            "left": 60
+        },
+        "responsive": true,
+        "animation_duration": 500
+    },
+    "data_processing": {
+        "max_preview_rows": 100,
+        "max_chart_data_points": 10000,
+        "auto_detect_dates": true,
+        "sample_method": "random",
+        "outlier_detection": {
+            "enabled": true,
+            "method": "iqr",
+            "factor": 1.5
+        }
+    }
+}

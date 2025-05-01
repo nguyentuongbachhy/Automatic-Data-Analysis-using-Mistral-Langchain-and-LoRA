@@ -1,0 +1,869 @@
+{"query": "what is the average number of international passengers of all airports?", "intent": "question", "entities": {"operation": "average", "columns": ["international_passengers", "avg"]}}
+{"query": "what are teh names of the different products, as well as the number of customers who have ordered each product.", "intent": "question", "entities": {"operation": "query", "columns": ["product_name"]}}
+{"query": "what is the level name of the cheapest catalog (in usd)?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["catalog_level_name", "price_in_dollars"]}}
+{"query": "which colleges have both authors with submission score above 90 and authors with submission score below 80?", "intent": "question", "entities": {"operation": "query", "columns": ["scores", "college"]}}
+{"query": "return the type name, type description, and date of creation for each document.", "intent": "question", "entities": {"operation": "query", "columns": ["document_type_name"]}}
+{"query": "what are the years of opening for tracks with seating between 4000 and 5000?", "intent": "question", "entities": {"operation": "query", "columns": ["year_opened", "seating"]}}
+{"query": "return the name of the marketing region the store rob dinning is located in.", "intent": "question", "entities": {"operation": "query", "columns": ["store_name", "marketing_region_name"]}}
+{"query": "return the characters for actors, ordered by age descending.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["character", "age"]}}
+{"query": "find the country that has the most stadiums.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "country"]}}
+{"query": "what are the names of ships that were involved in a mission launched after 1928?", "intent": "question", "entities": {"operation": "query", "columns": ["launched_year", "name"]}}
+{"query": "what states capital is salem", "intent": "question", "entities": {"operation": "query", "columns": ["capital", "state_name"]}}
+{"query": "find the total number of courses offered.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find all the directors who are from afghanistan", "intent": "question", "entities": {"operation": "query", "columns": ["name", "nationality"]}}
+{"query": "what is the description of the most popular role among users that have logged in?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "user_login", "role_description", "role_code"]}}
+{"query": "how many capitals does rhode island have", "intent": "question", "entities": {"operation": "count", "columns": ["capital", "count", "state_name"]}}
+{"query": "what are the nationalities and ages of journalists?", "intent": "question", "entities": {"operation": "query", "columns": ["nationality"]}}
+{"query": "how many aircrafts do we have?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find the names of all the catalog entries.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "show the most common headquarter for companies.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "headquarters"]}}
+{"query": "what are the cities no customers live in?", "intent": "question", "entities": {"operation": "query", "columns": ["city", "distinct"]}}
+{"query": "which allergy type has most number of allergies?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "allergytype"]}}
+{"query": "show the member names which are in both the party with id 3 and the party with id 1.", "intent": "question", "entities": {"operation": "query", "columns": ["party_id", "member_name"]}}
+{"query": "what are the type codes and descriptions of each budget type?", "intent": "question", "entities": {"operation": "query", "columns": ["budget_type_code"]}}
+{"query": "what are the names of all tracks that are on the movies playlist but not in the music playlist?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "papers about character recognition from before 2010", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "what are the first name and gender of the students who have allergy to milk but can put up with cats?", "intent": "question", "entities": {"operation": "query", "columns": ["stuid", "fname", "allergy"]}}
+{"query": "count the number of different software platforms.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "which complaint status has more than 3 records on file?", "intent": "question", "entities": {"operation": "query", "columns": ["complaint_status_code"]}}
+{"query": "which months have more than 2 happy hours?", "intent": "question", "entities": {"operation": "query", "columns": ["month"]}}
+{"query": "count the number of regions.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "how many invoices were billed from each state?", "intent": "question", "entities": {"operation": "count", "columns": ["billing_country", "billing_state"]}}
+{"query": "list the names of all scientists sorted in alphabetical order.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what is the most cited paper of ohad shamir ?", "intent": "analysis", "entities": {"operation": "group", "columns": ["authorname", "count", "distinct", "citedpaperid"]}}
+{"query": "how many buttercup kitchen are there in san francisco ?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "city_name"]}}
+{"query": "which major has between 2 and 30 number of students? list major and the number of students.", "intent": "question", "entities": {"operation": "query", "columns": ["major"]}}
+{"query": "does peter mertens ever collaborated with dina barbian ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "how many annual meeting events happened in the united kingdom region?", "intent": "question", "entities": {"operation": "count", "columns": ["region_name", "count"]}}
+{"query": "return the name of the party with the most members.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "party_id", "party_name"]}}
+{"query": "list the grapes and appelations of all wines.", "intent": "question", "entities": {"operation": "query", "columns": ["grape"]}}
+{"query": "which problems were reported before the date of any problem reported by the staff lysanne turcotte? give me the ids of the problems.", "intent": "question", "entities": {"operation": "min", "columns": ["min", "problem_id", "staff_first_name", "date_problem_reported"]}}
+{"query": "who are the different players and how many years has each played?", "intent": "question", "entities": {"operation": "count", "columns": ["player"]}}
+{"query": "what is the population of the capital of the largest state", "intent": "question", "entities": {"operation": "query", "columns": ["area", "population", "capital", "max", "city_name"]}}
+{"query": "what is the average number of hosts for parties?", "intent": "question", "entities": {"operation": "average", "columns": ["number_of_hosts", "avg"]}}
+{"query": "list the status shared by more than two roller coaster.", "intent": "question", "entities": {"operation": "query", "columns": ["status"]}}
+{"query": "what is the city with the most customers?", "intent": "analysis", "entities": {"operation": "group", "columns": ["city", "count"]}}
+{"query": "which institution does \"katsuhiro ueno\" belong to?", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "distinct"]}}
+{"query": "what year was the movie \" the imitation game \" produced", "intent": "question", "entities": {"operation": "query", "columns": ["release_year", "title"]}}
+{"query": "how many papers were published in nature communications 2015 conference ?", "intent": "question", "entities": {"operation": "count", "columns": ["paperid", "distinct", "year"]}}
+{"query": "how many distinct students have been in detention?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "what is the country of origin of the artist who is female and produced a song in bangla?", "intent": "question", "entities": {"operation": "query", "columns": ["gender", "country"]}}
+{"query": "find the names of all stores in khanewal district.", "intent": "question", "entities": {"operation": "query", "columns": ["store_name", "district_name"]}}
+{"query": "what is the average number of international passengers for an airport?", "intent": "question", "entities": {"operation": "average", "columns": ["international_passengers", "avg"]}}
+{"query": "show the most common location of performances.", "intent": "analysis", "entities": {"operation": "group", "columns": ["location", "count"]}}
+{"query": "what are the maximum and average height of the mountains?", "intent": "question", "entities": {"operation": "average", "columns": ["height", "max"]}}
+{"query": "what are the names of the members and branches at which they are registered sorted by year of registration?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name", "register_year"]}}
+{"query": "show all the faculty ranks and the number of students advised by each rank.", "intent": "question", "entities": {"operation": "query", "columns": ["rank"]}}
+{"query": "where is a restaurant on buchanan in san francisco that serves good arabic food ?", "intent": "question", "entities": {"operation": "query", "columns": ["house_number", "city_name"]}}
+{"query": "return me the papers by \" h. v. jagadish \" on vldb conference after 2000 .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "how many people reviewed \" bistro di napoli \" in 2015 ?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "show the location with most number of train stations.", "intent": "analysis", "entities": {"operation": "group", "columns": ["location", "count"]}}
+{"query": "show the number of customer cards.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find the id of instructors who didn't teach any courses?", "intent": "question", "entities": {"operation": "query", "columns": ["id"]}}
+{"query": "how many branches where have more than average number of memberships are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "membership_amount", "avg"]}}
+{"query": "return the famous titles for artists that have volumes that lasted more than 2 weeks on top.", "intent": "question", "entities": {"operation": "query", "columns": ["weeks_on_top", "famous_title"]}}
+{"query": "list the service id and details for the events.", "intent": "question", "entities": {"operation": "query", "columns": ["service_id"]}}
+{"query": "what are the mascots for schools with enrollments above the average?", "intent": "question", "entities": {"operation": "average", "columns": ["mascot", "enrollment", "avg"]}}
+{"query": "find the titles of all the papers written by \"aaron turon\".", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "title"]}}
+{"query": "who is the person that has no friend?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "return me the paper after 2000 with the most citations .", "intent": "analysis", "entities": {"operation": "sort", "columns": ["citation_num", "title", "year"]}}
+{"query": "find the author who achieved the highest score in a submission.", "intent": "question", "entities": {"operation": "query", "columns": ["scores", "author"]}}
+{"query": "what is the campus fee for san francisco state university in 1996?", "intent": "question", "entities": {"operation": "query", "columns": ["campus", "campusfee"]}}
+{"query": "show different locations and the number of performances at each location.", "intent": "question", "entities": {"operation": "query", "columns": ["location"]}}
+{"query": "return me the number of keywords in databases area .", "intent": "question", "entities": {"operation": "query", "columns": ["count", "name"]}}
+{"query": "find the number of different departments in each school whose number of different departments is less than 5.", "intent": "question", "entities": {"operation": "count", "columns": ["school_code", "count"]}}
+{"query": "find the number of classes in each department.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "dept_code"]}}
+{"query": "find the number of papers published by authors from the institution \"tokohu university\".", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "what is the city_code of the city that the most students live in?", "intent": "analysis", "entities": {"operation": "group", "columns": ["city_code", "count"]}}
+{"query": "what is the name, account type, and account balance corresponding to the customer with the highest credit score?", "intent": "question", "entities": {"operation": "query", "columns": ["credit_score", "cust_name"]}}
+{"query": "what are the facility codes of the apartments with more than four bedrooms?", "intent": "question", "entities": {"operation": "query", "columns": ["bedroom_count", "facility_code"]}}
+{"query": "how many documents are there of each type?", "intent": "question", "entities": {"operation": "count", "columns": ["document_type_code"]}}
+{"query": "give me the times and numbers of all trains that go to chennai, ordered by time.", "intent": "question", "entities": {"operation": "query", "columns": ["time", "destination"]}}
+{"query": "what are the employee ids and job ids for employees who make less than the lowest earning employee with title mk_man?", "intent": "question", "entities": {"operation": "min", "columns": ["min", "job_id", "employee_id", "salary"]}}
+{"query": "who are the nominees who have been nominated for both a tony award and a drama desk award?", "intent": "question", "entities": {"operation": "query", "columns": ["nominee", "award"]}}
+{"query": "list the names and decor of rooms that have a king bed. sort the list by their price.", "intent": "question", "entities": {"operation": "query", "columns": ["roomname", "bedtype", "baseprice"]}}
+{"query": "on what dates did the student with family name \"zieme\" and personal name \"bernie\" enroll in and complete the courses?", "intent": "question", "entities": {"operation": "query", "columns": ["family_name", "date_of_enrolment"]}}
+{"query": "what are the distinct location names?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "find the latest movie which \" gabriele ferzetti \" acted in", "intent": "question", "entities": {"operation": "query", "columns": ["name", "release_year"]}}
+{"query": "parsing papers from acl 2014 using jeopardy! questions", "intent": "question", "entities": {"operation": "query", "columns": ["datasetname", "distinct"]}}
+{"query": "show the distinct fate of missions that involve ships with nationality \"united states\"", "intent": "question", "entities": {"operation": "query", "columns": ["nationality", "distinct"]}}
+{"query": "what are the names of all employees who can fly both the boeing 737-800 and the airbus a340-300?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "list the name of enzymes in descending lexicographical order.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "return the cities with more than 3 airports in the united states.", "intent": "question", "entities": {"operation": "query", "columns": ["city", "country"]}}
+{"query": "find the city and name of bank branches that provide business loans.", "intent": "question", "entities": {"operation": "query", "columns": ["loan_type", "bname"]}}
+{"query": "what document types have more than 2 corresponding documents?", "intent": "question", "entities": {"operation": "query", "columns": ["document_type_code"]}}
+{"query": "what are the populations of the states through which the mississippi run", "intent": "question", "entities": {"operation": "query", "columns": ["population", "river_name", "traverse", "state_name"]}}
+{"query": "in what journals does linda shapiro publish ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "show all company names and headquarters in the descending order of market value.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["company", "market_value"]}}
+{"query": "who wrote on the topic of bacterial wilt in 2016 ?", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "what is the total number of customers who use banks in new york city?", "intent": "question", "entities": {"operation": "sum", "columns": ["city", "sum", "no_of_customers"]}}
+{"query": "what is the id of the event with the most participants?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "event_id"]}}
+{"query": "what are the job ids for jobs done more than once for a period of more than 300 days?", "intent": "question", "entities": {"operation": "query", "columns": ["end_date", "job_id"]}}
+{"query": "what are the name of rooms booked by customers whose first name has \"roy\" in part?", "intent": "question", "entities": {"operation": "query", "columns": ["roomname", "firstname"]}}
+{"query": "find the the customer details and id for the customers who had more than one policy.", "intent": "question", "entities": {"operation": "query", "columns": ["customer_id", "customer_details"]}}
+{"query": "list all user ids with name michelle", "intent": "question", "entities": {"operation": "query", "columns": ["user_id", "name"]}}
+{"query": "return all players sorted by college in ascending alphabetical order.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["player", "college"]}}
+{"query": "show different publishers together with the number of publications they have.", "intent": "question", "entities": {"operation": "query", "columns": ["publisher"]}}
+{"query": "what state has the least population density", "intent": "question", "entities": {"operation": "query", "columns": ["density", "min", "state_name"]}}
+{"query": "what are the names of technicians and the machine series that they repair?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "find all the vocal types.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what is the most common type of ships?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "type"]}}
+{"query": "how long is the longest river in the usa", "intent": "question", "entities": {"operation": "query", "columns": ["length", "max"]}}
+{"query": "what is the most populous city", "intent": "question", "entities": {"operation": "query", "columns": ["population", "city_name", "max"]}}
+{"query": "who are the friends of alice that are doctors?", "intent": "question", "entities": {"operation": "query", "columns": ["friend", "name"]}}
+{"query": "list the first and last name of students who are not living in the city with code hkg, and sorted the results by their ages.", "intent": "question", "entities": {"operation": "query", "columns": ["city_code", "fname", "age"]}}
+{"query": "list the number of customers that did not have any payment history.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "customer_id"]}}
+{"query": "who are the ministers and what parties do they belong to, listed descending by the times they took office?", "intent": "question", "entities": {"operation": "query", "columns": ["minister", "took_office"]}}
+{"query": "list all the product names with the color description \"white\".", "intent": "question", "entities": {"operation": "query", "columns": ["color_description", "product_name"]}}
+{"query": "find the number of songs in all the studio albums.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "type"]}}
+{"query": "what is the unit of measuerment of the product category code \"herbs\"?", "intent": "question", "entities": {"operation": "query", "columns": ["unit_of_measure", "product_category_code"]}}
+{"query": "how many rivers are called colorado", "intent": "question", "entities": {"operation": "count", "columns": ["count", "river_name"]}}
+{"query": "what are the last names and ids of all drivers who had 11 pit stops and participated in more than 5 races?", "intent": "question", "entities": {"operation": "query", "columns": ["driverid", "surname"]}}
+{"query": "how many members of \"bootup baltimore\" are older than 18?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "clubname"]}}
+{"query": "how high is the highest point of delaware", "intent": "question", "entities": {"operation": "query", "columns": ["highest_elevation", "state_name"]}}
+{"query": "show all student ids with more than total 10 hours per week on all sports played.", "intent": "question", "entities": {"operation": "sum", "columns": ["stuid", "hoursperweek"]}}
+{"query": "what conferences does daniella coelho publish in ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "for each state, find the total account balance of customers whose credit score is above 100.", "intent": "question", "entities": {"operation": "sum", "columns": ["credit_score", "acc_bal", "state", "sum"]}}
+{"query": "find the titles of items whose rating is higher than the average review rating of all items.", "intent": "question", "entities": {"operation": "average", "columns": ["rating", "title", "avg"]}}
+{"query": "what are the job ids and dates of hire for employees hired after november 5th, 2007 and before july 5th, 2009?", "intent": "question", "entities": {"operation": "query", "columns": ["job_id", "hire_date"]}}
+{"query": "what are the names of the technicians that have not been assigned to repair machines?", "intent": "question", "entities": {"operation": "query", "columns": ["technician_id", "name"]}}
+{"query": "what papers does richard ladner have in chi ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "find the student id and middle name for all the students with at most two enrollments.", "intent": "question", "entities": {"operation": "query", "columns": ["student_id"]}}
+{"query": "how many churches opened before 1850 are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "open_date"]}}
+{"query": "which staff members who reported problems from the product \"rem\" but not \"aut\"? give me their first and last names.", "intent": "question", "entities": {"operation": "query", "columns": ["staff_first_name", "product_name"]}}
+{"query": "how many different captain ranks are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "how many papers appeared at nature communications last year", "intent": "question", "entities": {"operation": "count", "columns": ["paperid", "distinct", "year"]}}
+{"query": "list the name of artworks in ascending alphabetical order.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "which rivers do not run through usa", "intent": "question", "entities": {"operation": "query", "columns": ["river_name", "country_name"]}}
+{"query": "find the cell mobile number of the candidates whose assessment code is \"fail\"?", "intent": "question", "entities": {"operation": "query", "columns": ["cell_mobile_number", "asessment_outcome_code"]}}
+{"query": "find the full names of employees who help customers with the first name leonie.", "intent": "question", "entities": {"operation": "query", "columns": ["firstname"]}}
+{"query": "how many male (sex is m) students have class senator votes in the fall election cycle?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "sex"]}}
+{"query": "what is the capital of the largest state", "intent": "question", "entities": {"operation": "query", "columns": ["area", "max", "capital"]}}
+{"query": "which apartment type code appears the most often?", "intent": "analysis", "entities": {"operation": "group", "columns": ["apt_type_code", "count"]}}
+{"query": "what are the populations of the states through which the mississippi runs", "intent": "question", "entities": {"operation": "query", "columns": ["population", "river_name", "traverse", "state_name"]}}
+{"query": "show the number of all customers without an account.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "customer_id"]}}
+{"query": "what is the average price of products with manufacturer codes equal to 2?", "intent": "question", "entities": {"operation": "average", "columns": ["manufacturer", "price", "avg"]}}
+{"query": "for each building, show the name of the building and the number of institutions in it.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "building_id"]}}
+{"query": "what are the names of all the clubs starting with the oldest?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name", "start_year"]}}
+{"query": "which major has the most students?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "major"]}}
+{"query": "what are the names of all the races that occurred in the year 2017?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "year"]}}
+{"query": "list the countries having more than 4 addresses listed.", "intent": "question", "entities": {"operation": "query", "columns": ["country", "address_id"]}}
+{"query": "how many states are in the usa", "intent": "question", "entities": {"operation": "count", "columns": ["count", "state_name"]}}
+{"query": "eccv 2014 papers using imagenet", "intent": "question", "entities": {"operation": "query", "columns": ["datasetname", "distinct"]}}
+{"query": "papers published in the last year", "intent": "question", "entities": {"operation": "query", "columns": ["max", "distinct", "year"]}}
+{"query": "show other account details for account with name 338.", "intent": "question", "entities": {"operation": "query", "columns": ["account_name", "other_account_details"]}}
+{"query": "what is the average and maximum number of hours students who made the team practiced?", "intent": "question", "entities": {"operation": "average", "columns": ["decision", "hs", "avg"]}}
+{"query": "how many customers have email that contains \"gmail.com\"?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "email"]}}
+{"query": "how many department stores does the store chain south have?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "dept_store_chain_name"]}}
+{"query": "find each student's first name.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "show names for all aircrafts of which john williams has certificates.", "intent": "prediction", "entities": {"operation": "predict", "columns": ["name"]}}
+{"query": "find the id and star rating of each hotel and sort them in increasing order of price.", "intent": "question", "entities": {"operation": "query", "columns": ["price_range", "hotel_id"]}}
+{"query": "show the 3 counties with the smallest population.", "intent": "question", "entities": {"operation": "query", "columns": ["population", "county_name"]}}
+{"query": "find the first name and office of history professor who did not get a ph.d. degree.", "intent": "question", "entities": {"operation": "query", "columns": ["dept_name", "emp_fname"]}}
+{"query": "find all phones that have word 'full' in their accreditation types. list the hardware model name and company name.", "intent": "question", "entities": {"operation": "query", "columns": ["accreditation_type", "hardware_model_name"]}}
+{"query": "return the highest acc percent across all basketball matches.", "intent": "question", "entities": {"operation": "query", "columns": ["acc_percent"]}}
+{"query": "return me the conference, which published \" making database systems usable \" .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "what is the count and code of the job with the most employee?", "intent": "analysis", "entities": {"operation": "group", "columns": ["emp_jobcode", "count"]}}
+{"query": "how many papers does ed desmond have in semantic parsing area ?", "intent": "question", "entities": {"operation": "count", "columns": ["authorname", "distinct"]}}
+{"query": "find the names of all artists that have \"a\" in their names.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what are the titles and directors of the films were never presented in china?", "intent": "question", "entities": {"operation": "query", "columns": ["film_id", "country", "title"]}}
+{"query": "what are the total enrollments of universities of each affiliation type?", "intent": "question", "entities": {"operation": "sum", "columns": ["affiliation", "enrollment", "sum"]}}
+{"query": "what are the details for all projects that did not hire any staff in a research role?", "intent": "question", "entities": {"operation": "query", "columns": ["project_id", "project_details", "role_code"]}}
+{"query": "how many products are there under the category \"seeds\"?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "product_category_code"]}}
+{"query": "how many games in total did team boston red stockings attend from 2000 to 2010?", "intent": "question", "entities": {"operation": "count", "columns": ["name", "attendance", "sum"]}}
+{"query": "find the first names of all instructors who have taught some course and the course description.", "intent": "question", "entities": {"operation": "query", "columns": ["emp_fname"]}}
+{"query": "show me the number of parks the state of ny has.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "state"]}}
+{"query": "find the name and partition id for users who tweeted less than twice.", "intent": "question", "entities": {"operation": "query", "columns": ["uid", "name"]}}
+{"query": "what is the year and semester with the most courses?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "semester"]}}
+{"query": "show the first name, last name, and phone number for all female faculty members.", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "sex"]}}
+{"query": "what state has the largest city", "intent": "question", "entities": {"operation": "query", "columns": ["population", "max", "state_name"]}}
+{"query": "show me papers by sharon goldwater .", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "find the ids and first names of the 3 teachers that have the most number of assessment notes?", "intent": "question", "entities": {"operation": "query", "columns": ["count", "teacher_id"]}}
+{"query": "what are the shipping agent names?", "intent": "question", "entities": {"operation": "query", "columns": ["shipping_agent_name"]}}
+{"query": "how many schools have some students playing in goalie and mid positions.", "intent": "question", "entities": {"operation": "count", "columns": ["ppos", "count", "cname"]}}
+{"query": "return me the homepage of \" h. v. jagadish \" .", "intent": "question", "entities": {"operation": "query", "columns": ["homepage", "name"]}}
+{"query": "count the number of trips that did not end in san francisco city.", "intent": "question", "entities": {"operation": "count", "columns": ["city", "count"]}}
+{"query": "list all the salary values players received in 2010 and 2001.", "intent": "question", "entities": {"operation": "query", "columns": ["salary", "year"]}}
+{"query": "show the names of the three most recent festivals.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["year", "festival_name"]}}
+{"query": "how many film are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "count the number of distinct delegates who are from counties with population above 50000.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "population"]}}
+{"query": "list the type of the services in alphabetical order.", "intent": "question", "entities": {"operation": "query", "columns": ["service_type_code"]}}
+{"query": "list the personal names and family names of all the students in alphabetical order of family name.", "intent": "question", "entities": {"operation": "query", "columns": ["family_name", "personal_name"]}}
+{"query": "what is the area of the states", "intent": "question", "entities": {"operation": "query", "columns": ["area"]}}
+{"query": "advisor 1121 has how many students?", "intent": "question", "entities": {"operation": "count", "columns": ["advisor", "count"]}}
+{"query": "find the name and gender of the staff who has been assigned the job of sales person but never clerical staff.", "intent": "question", "entities": {"operation": "query", "columns": ["staff_name", "job_title_code"]}}
+{"query": "parsing papers that have the most citations", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "keyphrasename", "distinct", "citedpaperid"]}}
+{"query": "find id of the candidate whose email is stanley.monahan@example.org?", "intent": "question", "entities": {"operation": "query", "columns": ["candidate_id", "email_address"]}}
+{"query": "how many students are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "when did the staff member with first name as janessa and last name as sawayn join the company?", "intent": "question", "entities": {"operation": "query", "columns": ["date_joined_staff", "first_name"]}}
+{"query": "count the number of tracks that are part of the rock genre.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "how many tracks are in each genre?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "which countries have at least 3 cities?", "intent": "question", "entities": {"operation": "query", "columns": ["country", "country_id"]}}
+{"query": "peter mertens and dina barbian as co-authors", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "show storm name with at least two regions and 10 cities affected.", "intent": "question", "entities": {"operation": "query", "columns": ["storm_id", "name", "number_city_affected"]}}
+{"query": "find the names of artists that do not have any albums.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what are the capitals of the states that border texas", "intent": "question", "entities": {"operation": "query", "columns": ["capital", "state_name"]}}
+{"query": "find the different billing countries for all invoices.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what are keyphrases by christof dallermassl in 2000 ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "show all artist names and the number of exhibitions for each artist.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "artist_id"]}}
+{"query": "find the name and salary of instructors who are advisors of the students from the math department.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "dept_name"]}}
+{"query": "who has written the most syntactic parsing papers ?", "intent": "analysis", "entities": {"operation": "group", "columns": ["keyphrasename", "paperid", "distinct", "authorid", "count"]}}
+{"query": "what is the department name and corresponding building for the department with the greatest budget?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["budget", "dept_name"]}}
+{"query": "count the number of exhibitions that happened in or after 2005.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "year"]}}
+{"query": "what is all the product data, as well as  each product's manufacturer?", "intent": "question", "entities": {"operation": "query"}}
+{"query": "how many rivers run through idaho", "intent": "question", "entities": {"operation": "count", "columns": ["count", "river_name", "traverse"]}}
+{"query": "find the country of the airlines whose name starts with 'orbit'.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "country"]}}
+{"query": "what is the tallest mountain in the united states", "intent": "question", "entities": {"operation": "query", "columns": ["mountain_altitude", "max", "mountain_name"]}}
+{"query": "how many schools are in the basketball match?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "show different colleges along with the number of authors of submission from each college.", "intent": "question", "entities": {"operation": "query", "columns": ["college"]}}
+{"query": "what are the login names of the students with family name \"ward\"?", "intent": "question", "entities": {"operation": "query", "columns": ["login_name", "family_name"]}}
+{"query": "show the name of aircrafts with top three lowest distances.", "intent": "question", "entities": {"operation": "query", "columns": ["distance", "name"]}}
+{"query": "find the name of the customer who made the most orders.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "customer_name", "customer_id"]}}
+{"query": "find the physicians who are trained in a procedure that costs more than 5000.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "cost"]}}
+{"query": "what are the store names of drama workshop groups?", "intent": "question", "entities": {"operation": "query", "columns": ["store_name"]}}
+{"query": "what are the names, ages, and countries of artists, sorted by the year they joined?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "year_join"]}}
+{"query": "find the id of songs that are available in mp4 format and have resolution lower than 1000.", "intent": "question", "entities": {"operation": "query", "columns": ["f_id", "resolution", "formats"]}}
+{"query": "for which product was there a problem reported by christop berge, with closure authorised by ashley medhurst? return the product ids.", "intent": "question", "entities": {"operation": "query", "columns": ["product_id", "staff_first_name"]}}
+{"query": "are there any monte carlo simulation papers since 2011 ?", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "what is the biggest state in the usa", "intent": "question", "entities": {"operation": "query", "columns": ["area", "max", "state_name"]}}
+{"query": "what are the allergies and their types that the student with first name lisa has? and order the result by name of allergies.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["fname", "allergy"]}}
+{"query": "which state borders kentucky", "intent": "question", "entities": {"operation": "query", "columns": ["border", "state_name"]}}
+{"query": "what are the average profits of companies?", "intent": "question", "entities": {"operation": "average", "columns": ["profits_billion", "avg"]}}
+{"query": "find the names of rooms that have been reserved for more than 60 times.", "intent": "question", "entities": {"operation": "query", "columns": ["roomname", "room"]}}
+{"query": "show the names of pilots and fleet series of the aircrafts they have flied with in ascending order of the rank of the pilot.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["rank", "pilot_name"]}}
+{"query": "list the names, color descriptions and product descriptions of products with category \"herbs\".", "intent": "question", "entities": {"operation": "query", "columns": ["product_name", "product_category_code"]}}
+{"query": "what are the names of departments that have at least one employee.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what is the first and last name of the artist who performed back stage for the song \"der kapitan\"?", "intent": "question", "entities": {"operation": "query", "columns": ["firstname", "title"]}}
+{"query": "what are the names of all products that are not the most frequently-used maximum page size?", "intent": "question", "entities": {"operation": "max", "columns": ["max_page_size", "count", "product"]}}
+{"query": "how many customers have no payment histories?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "customer_id"]}}
+{"query": "papers typically cited by parsing papers", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "list all users who reviewed businesses that are restaurant in 2010 .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "category_name"]}}
+{"query": "what is the label with the most albums?", "intent": "analysis", "entities": {"operation": "group", "columns": ["label", "count"]}}
+{"query": "what is the shop name corresponding to the shop that opened in the most recent year?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["open_year", "shop_name"]}}
+{"query": "how many rooms in total are there in the apartments in the building with short name \"columbus square\"?", "intent": "question", "entities": {"operation": "count", "columns": ["sum", "building_short_name", "room_count"]}}
+{"query": "what is the total time for all lessons taught by janessa sawayn?", "intent": "question", "entities": {"operation": "sum", "columns": ["lesson_time", "first_name", "sum"]}}
+{"query": "find the name and building of the department with the highest budget.", "intent": "question", "entities": {"operation": "query", "columns": ["budget", "dept_name"]}}
+{"query": "show the apartment type codes and the corresponding number of apartments sorted by the number of apartments in ascending order.", "intent": "analysis", "entities": {"operation": "group", "columns": ["apt_type_code", "count"]}}
+{"query": "how many tracks belong to rock genre?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "what papers has richard ladner written at chi ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "what are the average prices of wines for different years?", "intent": "question", "entities": {"operation": "average", "columns": ["year", "price", "avg"]}}
+{"query": "count the number of different affiliation types.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "please show the different statuses, ordered by the number of cities that have each.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "status"]}}
+{"query": "what papers does oren etzioni cite", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "what is the type of the document named \"david cv\"?", "intent": "question", "entities": {"operation": "query", "columns": ["document_type_code", "document_name"]}}
+{"query": "return the publisher that has published the most books.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "publisher"]}}
+{"query": "find the average access counts of documents with functional area \"acknowledgement\".", "intent": "question", "entities": {"operation": "average", "columns": ["functional_area_description", "access_count", "avg"]}}
+{"query": "report the distinct registration date and the election cycle.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what are the guest first name, start date, and end date of each apartment booking?", "intent": "question", "entities": {"operation": "query", "columns": ["guest_first_name"]}}
+{"query": "what is the lowest point in usa", "intent": "question", "entities": {"operation": "query", "columns": ["lowest_point", "min", "lowest_elevation"]}}
+{"query": "what is the highest point in the country", "intent": "question", "entities": {"operation": "query", "columns": ["max", "highest_elevation", "highest_point"]}}
+{"query": "from the trip record, find the number of unique bikes.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find the county where produces the most number of wines with score higher than 90.", "intent": "question", "entities": {"operation": "query", "columns": ["score", "count", "county"]}}
+{"query": "show all game names played by at least 1000 hours.", "intent": "question", "entities": {"operation": "query", "columns": ["gameid", "gname", "hours_played"]}}
+{"query": "what is the river that cross over illinois", "intent": "question", "entities": {"operation": "query", "columns": ["river_name", "traverse"]}}
+{"query": "find the last names of the students in third grade that are not taught by covin jerome.", "intent": "question", "entities": {"operation": "query", "columns": ["grade", "distinct"]}}
+{"query": "what is the name of the course that has the most student enrollment?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "course_name"]}}
+{"query": "what is the name of the marketing region that the store rob dinning belongs to?", "intent": "question", "entities": {"operation": "query", "columns": ["store_name", "marketing_region_name"]}}
+{"query": "what are the visit date and details of the visitor whose detail is 'vincent'?", "intent": "question", "entities": {"operation": "query", "columns": ["tourist_details", "visit_date"]}}
+{"query": "how many players played each position?", "intent": "question", "entities": {"operation": "count", "columns": ["position"]}}
+{"query": "list the forenames of all distinct drivers in alphabetical order?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct", "forename"]}}
+{"query": "list the text of all tweets in the order of date.", "intent": "question", "entities": {"operation": "query", "columns": ["createdate", "text"]}}
+{"query": "find all movies featuring both \" woody strode \" and \" jason robards \"", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "show the detail of vehicle with id 1.", "intent": "question", "entities": {"operation": "query", "columns": ["vehicle_id", "vehicle_details"]}}
+{"query": "which us city has the highest population density", "intent": "question", "entities": {"operation": "query", "columns": ["population", "city_name", "max"]}}
+{"query": "how many papers does christopher d. manning have ?", "intent": "question", "entities": {"operation": "count", "columns": ["authorname", "distinct"]}}
+{"query": "show ids for all students who have advisor 1121.", "intent": "question", "entities": {"operation": "query", "columns": ["stuid", "advisor"]}}
+{"query": "how many times does roy sweazy has reserved a room.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "firstname"]}}
+{"query": "how many paper has ed desmond written about semantic parsing ?", "intent": "question", "entities": {"operation": "count", "columns": ["authorname", "distinct"]}}
+{"query": "how many states border kentucky", "intent": "question", "entities": {"operation": "count", "columns": ["count", "border", "state_name"]}}
+{"query": "what is the full name of the employee who has the most customers?", "intent": "analysis", "entities": {"operation": "group", "columns": ["first_name", "id", "count"]}}
+{"query": "find the ids of the problems reported after 1978-06-26.", "intent": "question", "entities": {"operation": "query", "columns": ["problem_id", "date_problem_reported"]}}
+{"query": "what are name and phone number of patients who had more than one appointment?", "intent": "question", "entities": {"operation": "query", "columns": ["patient", "name"]}}
+{"query": "what did sharon goldwater write ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "which year had the most nips papers ?", "intent": "analysis", "entities": {"operation": "group", "columns": ["paperid", "distinct", "year", "count", "venuename"]}}
+{"query": "return the title of the film with the highest high estimate?", "intent": "question", "entities": {"operation": "query", "columns": ["high_estimate", "title"]}}
+{"query": "show all school names in alphabetical order.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["school_name"]}}
+{"query": "what are the titles of all movies that have not been rated?", "intent": "question", "entities": {"operation": "query", "columns": ["mid", "title"]}}
+{"query": "find the total savings balance of all accounts except the account with name ‘brown’.", "intent": "question", "entities": {"operation": "sum", "columns": ["sum", "name", "balance"]}}
+{"query": "which customers have made at least two orders? give me each customer name and number of orders made.", "intent": "question", "entities": {"operation": "query", "columns": ["customer_name", "customer_id"]}}
+{"query": "for each zip code, return how many times max wind speed reached 25?", "intent": "question", "entities": {"operation": "count", "columns": ["max_wind_speed_mph", "zip_code"]}}
+{"query": "return me the author in the \" university of michigan \" in databases area whose papers have more than 5000 total citations .", "intent": "question", "entities": {"operation": "sum", "columns": ["citation_num", "name"]}}
+{"query": "what are the first names of customers who have not rented any films after '2005-08-23 02:06:01'?", "intent": "question", "entities": {"operation": "query", "columns": ["rental_date", "first_name", "customer_id"]}}
+{"query": "what are the names of the products that have a color description of 'red' and the 'fast' characteristic?", "intent": "question", "entities": {"operation": "query", "columns": ["color_description", "product_name"]}}
+{"query": "what are the hometowns that are shared by at least two gymnasts?", "intent": "question", "entities": {"operation": "query", "columns": ["hometown"]}}
+{"query": "how tall is guadalupe peak", "intent": "question", "entities": {"operation": "query", "columns": ["highest_elevation", "highest_point"]}}
+{"query": "what is the average distance and price for all flights from la?", "intent": "question", "entities": {"operation": "average", "columns": ["origin", "distance", "price", "avg"]}}
+{"query": "give the different reigns of wrestlers who are not located in tokyo, japan.", "intent": "question", "entities": {"operation": "query", "columns": ["location", "distinct"]}}
+{"query": "list the names of climbers whose country is not switzerland.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "country"]}}
+{"query": "show me all the restaurants.", "intent": "question", "entities": {"operation": "query", "columns": ["resname"]}}
+{"query": "list all payment methods and number of payments using each payment methods.", "intent": "question", "entities": {"operation": "query", "columns": ["payment_method_code"]}}
+{"query": "find the names of the buildings in \"on-hold\" status, and sort them in ascending order of building stories.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "stories", "status"]}}
+{"query": "show the unique first names, last names, and phone numbers for all customers with any account.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what are the employee ids for employees who make more than the average?", "intent": "question", "entities": {"operation": "average", "columns": ["employee_id", "salary", "avg"]}}
+{"query": "please show the most common status of roller coasters.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "status"]}}
+{"query": "what are the names of all movies made before 1980 or had james cameron as the director?", "intent": "question", "entities": {"operation": "query", "columns": ["director", "title"]}}
+{"query": "list all information in the item table.", "intent": "question", "entities": {"operation": "query"}}
+{"query": "what are the id of problems reported by the staff named dameon frami or jolie weber?", "intent": "question", "entities": {"operation": "query", "columns": ["product_id", "staff_first_name"]}}
+{"query": "what apartment type codes and apartment numbers do the buildings managed by \"kyle\" have?", "intent": "question", "entities": {"operation": "query", "columns": ["apt_type_code", "building_manager"]}}
+{"query": "find the total market rate of the furnitures that have the top 2 market shares.", "intent": "question", "entities": {"operation": "sum", "columns": ["market_rate", "sum"]}}
+{"query": "show the average population of all counties.", "intent": "question", "entities": {"operation": "average", "columns": ["population", "avg"]}}
+{"query": "how many roles are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "how many citizens does the biggest city have in the usa", "intent": "question", "entities": {"operation": "count", "columns": ["population", "max"]}}
+{"query": "how many professors are in the accounting dept?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "dept_name"]}}
+{"query": "find all the locations whose names contain the word \"film\".", "intent": "question", "entities": {"operation": "query", "columns": ["location_name"]}}
+{"query": "how many people are older than every engineer?", "intent": "question", "entities": {"operation": "count", "columns": ["job", "count", "age", "max"]}}
+{"query": "what are the names of the activities mark giuliano is involved in", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "activity_name"]}}
+{"query": "number of states bordering kentucky", "intent": "question", "entities": {"operation": "query", "columns": ["count", "border", "state_name"]}}
+{"query": "what are the opening years in which at least two shops opened?", "intent": "question", "entities": {"operation": "query", "columns": ["open_year"]}}
+{"query": "what is the biggest city in the smallest state", "intent": "question", "entities": {"operation": "query", "columns": ["area", "population", "state_name", "min", "max", "city_name"]}}
+{"query": "which is the shortest river", "intent": "question", "entities": {"operation": "query", "columns": ["min", "length", "river_name"]}}
+{"query": "retrieve all the last names of authors in alphabetical order.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["lname"]}}
+{"query": "which grade is studying in room 105?", "intent": "question", "entities": {"operation": "query", "columns": ["classroom", "distinct"]}}
+{"query": "find the average unit price for a track.", "intent": "question", "entities": {"operation": "average", "columns": ["unitprice", "avg"]}}
+{"query": "which students study under the teacher named otha moyer? give me the first and last names of the students.", "intent": "question", "entities": {"operation": "query", "columns": ["firstname"]}}
+{"query": "show ids for all documents in type cv without expense budgets.", "intent": "question", "entities": {"operation": "query", "columns": ["document_type_code", "document_id"]}}
+{"query": "which of the airport names contains the word 'international'?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "display all the information about the department marketing.", "intent": "visualization", "entities": {"operation": "visualize", "columns": ["department_name"]}, "visualization_type": "bar"}
+{"query": "show me all the major lakes in the us", "intent": "question", "entities": {"operation": "query", "columns": ["area", "lake_name"]}}
+{"query": "how many members are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "how many papers has christopher d. manning published ?", "intent": "question", "entities": {"operation": "count", "columns": ["authorname", "distinct"]}}
+{"query": "what is the title of the prerequisite class of international finance course?", "intent": "question", "entities": {"operation": "query", "columns": ["prereq_id", "title", "course_id"]}}
+{"query": "find the department name of the instructor whose name contains 'soisalon'.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "dept_name"]}}
+{"query": "return me the number of papers written by \" h. v. jagadish \" and \" divesh srivastava \" .", "intent": "question", "entities": {"operation": "query", "columns": ["count", "name"]}}
+{"query": "how many different jobs are listed?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "how many distinct artists have volumes?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find all cities which has a \" taj mahal \" .", "intent": "question", "entities": {"operation": "query", "columns": ["city", "name"]}}
+{"query": "who is the \"cto\" of club \"hopkins student enterprises\"? show the first name and last name.", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "clubname"]}}
+{"query": "which states have cities named springfield", "intent": "question", "entities": {"operation": "query", "columns": ["city_name", "state_name"]}}
+{"query": "what are the degrees conferred in \"san francisco state university\" in 2001.", "intent": "question", "entities": {"operation": "query", "columns": ["campus", "degrees"]}}
+{"query": "which orders have shipment after 2000-01-01? give me the order ids.", "intent": "question", "entities": {"operation": "query", "columns": ["shipment_date", "order_id"]}}
+{"query": "who is the most cited author at cvpr ?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "authorid", "venuename", "distinct"]}}
+{"query": "what are the names and cities of bank branches that offer loans for business?", "intent": "question", "entities": {"operation": "query", "columns": ["loan_type", "bname"]}}
+{"query": "find the name and email for the users who have more than one follower.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "f1"]}}
+{"query": "datasets mentioned at acl", "intent": "question", "entities": {"operation": "query", "columns": ["venuename", "distinct"]}}
+{"query": "find the names of schools that have some students playing in goalie and mid positions.", "intent": "question", "entities": {"operation": "query", "columns": ["ppos", "cname"]}}
+{"query": "what are the distinct positions of the players from a country whose capital is dublin?", "intent": "question", "entities": {"operation": "query", "columns": ["capital", "distinct"]}}
+{"query": "what are the names of all customers, ordered by account balance?", "intent": "question", "entities": {"operation": "query", "columns": ["acc_bal", "cust_name"]}}
+{"query": "find the number of students taught by the teacher kawa gordon.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "firstname"]}}
+{"query": "find the average age of students who live in the city with code \"nyc\" and have secretary votes in the spring election cycle.", "intent": "question", "entities": {"operation": "average", "columns": ["city_code", "age", "avg"]}}
+{"query": "find all the cities that have 2 to 4 parks.", "intent": "question", "entities": {"operation": "query", "columns": ["city"]}}
+{"query": "find the first name and age of the students who are playing both football and lacrosse.", "intent": "question", "entities": {"operation": "query", "columns": ["stuid", "fname", "sportname"]}}
+{"query": "which customers do not have a first notification of loss record? give me the customer names.", "intent": "question", "entities": {"operation": "query", "columns": ["customer_name"]}}
+{"query": "what is the average points of players from club with name \"aib\".", "intent": "question", "entities": {"operation": "average", "columns": ["name", "points", "avg"]}}
+{"query": "return me the number of keywords in the papers of \" university of michigan \" .", "intent": "question", "entities": {"operation": "query", "columns": ["count", "name"]}}
+{"query": "which county has the largest population? give me the name of the county.", "intent": "question", "entities": {"operation": "query", "columns": ["population", "county_name"]}}
+{"query": "through which states does the ohio flow", "intent": "question", "entities": {"operation": "query", "columns": ["river_name", "traverse"]}}
+{"query": "what are the descriptions for each color?", "intent": "question", "entities": {"operation": "query", "columns": ["color_description"]}}
+{"query": "papers about tail in nips", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "what are the names of documents that do not have any images?", "intent": "question", "entities": {"operation": "query", "columns": ["document_name"]}}
+{"query": "papers that were not published in the last year", "intent": "question", "entities": {"operation": "query", "columns": ["distinct", "year"]}}
+{"query": "how many tracks are in the aac audio file media type?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "what are the different card types, and how many cards are there of each?", "intent": "question", "entities": {"operation": "count", "columns": ["card_type_code"]}}
+{"query": "count the number of different statuses.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "what are all the payment methods?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what are the invoice dates for customers with the first name astrid and the last name gruber?", "intent": "question", "entities": {"operation": "query", "columns": ["invoicedate", "firstname"]}}
+{"query": "what is the most common interaction type between enzymes and medicine? and how many are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "interaction_type"]}}
+{"query": "show the product type codes that have both products with price higher than 4500 and products with price lower than 3000.", "intent": "question", "entities": {"operation": "query", "columns": ["product_price", "product_type_code"]}}
+{"query": "where did li dong publish in 2016 ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "return the first names and last names of employees who earn more than 30000 in salary.", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "salary"]}}
+{"query": "find the settlement amount of the claim with the largest claim amount. show both the settlement amount and claim amount.", "intent": "question", "entities": {"operation": "query", "columns": ["amount_claimed", "amount_settled"]}}
+{"query": "give the distinct department ids of departments in which a manager is in charge of 4 or more employees?", "intent": "question", "entities": {"operation": "query", "columns": ["employee_id", "department_id", "distinct"]}}
+{"query": "what are the different ranges of the 3 mountains with the highest prominence?", "intent": "question", "entities": {"operation": "query", "columns": ["prominence", "distinct"]}}
+{"query": "what is the type of the organization with the most research staff?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "organisation_type"]}}
+{"query": "what is the name of the race held most recently?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["date", "name"]}}
+{"query": "what is the list of distinct product names sorted by product id?", "intent": "question", "entities": {"operation": "query", "columns": ["product_id", "distinct"]}}
+{"query": "list the clubs that have at least a member with advisor \"1121\".", "intent": "question", "entities": {"operation": "query", "columns": ["advisor", "distinct"]}}
+{"query": "how many students whose are playing the role of goalie?", "intent": "question", "entities": {"operation": "count", "columns": ["ppos", "count"]}}
+{"query": "return the color code and description for the product with the name 'chervil'.", "intent": "question", "entities": {"operation": "query", "columns": ["product_name", "color_code"]}}
+{"query": "papers written by liwen xiong in 2015", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "what is the area of the state with the capital albany", "intent": "question", "entities": {"operation": "query", "columns": ["area", "capital"]}}
+{"query": "display the first and last name, department, city, and state province for each employee.", "intent": "visualization", "entities": {"operation": "visualize", "columns": ["first_name"]}, "visualization_type": "bar"}
+{"query": "how many drama workshop groups are there in each city? return both the city and the count.", "intent": "question", "entities": {"operation": "count", "columns": ["city_town"]}}
+{"query": "what is the date of birth of every customer whose status code is 'good customer'?", "intent": "question", "entities": {"operation": "query", "columns": ["customer_status_code", "date_of_birth"]}}
+{"query": "what is the number of professors who are in the accounting or biology departments?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "dept_name"]}}
+{"query": "give me all the phone numbers and email addresses of the workshop groups where services are performed.", "intent": "question", "entities": {"operation": "query", "columns": ["store_phone"]}}
+{"query": "what are the details of the shops that can be accessed by walk?", "intent": "question", "entities": {"operation": "query", "columns": ["how_to_get_there", "shop_details"]}}
+{"query": "how many professors have a ph.d. in each department?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "prof_high_degree", "dept_code"]}}
+{"query": "how long is the shortest river in the usa", "intent": "question", "entities": {"operation": "query", "columns": ["min", "length"]}}
+{"query": "what is the total home game attendance of team boston red stockings from 2000 to 2010?", "intent": "question", "entities": {"operation": "sum", "columns": ["name", "attendance", "sum"]}}
+{"query": "what are the names of projects that have not been assigned?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "project", "code"]}}
+{"query": "count the number of book clubs.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "what are the ids of the students who registered for some courses but had the least number of courses for all students?", "intent": "analysis", "entities": {"operation": "group", "columns": ["student_id", "count"]}}
+{"query": "what are the names and locations of festivals?", "intent": "question", "entities": {"operation": "query", "columns": ["festival_name"]}}
+{"query": "what is the height of the highest point in the usa", "intent": "question", "entities": {"operation": "query", "columns": ["max", "highest_elevation"]}}
+{"query": "how many roller coasters are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "count the number of different positions in the club \"bootup baltimore\".", "intent": "question", "entities": {"operation": "count", "columns": ["count", "clubname"]}}
+{"query": "give the names of wines with prices above any wine produced in 2006.", "intent": "question", "entities": {"operation": "max", "columns": ["max", "name", "price", "year"]}}
+{"query": "how many articles were published in the cell journal in 2015 ?", "intent": "question", "entities": {"operation": "count", "columns": ["journalname", "paperid", "distinct"]}}
+{"query": "What should I know about this dataset?", "intent": "insight", "entities": {"operation": "insight"}}
+{"query": "what is the average number of people injured by all perpetrators?", "intent": "question", "entities": {"operation": "average", "columns": ["injured", "avg"]}}
+{"query": "how many faculty members do we have for each faculty rank?", "intent": "question", "entities": {"operation": "count", "columns": ["rank"]}}
+{"query": "what is the distinct service types that are provided by the organization which has detail 'denesik and sons party'?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct", "organization_details"]}}
+{"query": "give the name of the products that have a color description 'yellow'.", "intent": "question", "entities": {"operation": "query", "columns": ["color_description", "product_name"]}}
+{"query": "show the id and name of the employee with maximum salary.", "intent": "question", "entities": {"operation": "max", "columns": ["eid", "salary"]}}
+{"query": "find the booking start date and end date for the apartments that have more than two bedrooms.", "intent": "question", "entities": {"operation": "query", "columns": ["booking_start_date", "bedroom_count"]}}
+{"query": "how many courses have more than 2 credits?", "intent": "question", "entities": {"operation": "count", "columns": ["credits", "count"]}}
+{"query": "show the names of festivals that have nominated artworks of type \"program talent show\".", "intent": "question", "entities": {"operation": "query", "columns": ["type", "festival_name"]}}
+{"query": "where is the most populated area of wyoming", "intent": "question", "entities": {"operation": "query", "columns": ["population", "city_name", "max", "state_name"]}}
+{"query": "datasets in semantic parsing papers", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "what are the average and minimum price (in euro) of all products?", "intent": "question", "entities": {"operation": "average", "columns": ["avg", "price_in_euros"]}}
+{"query": "tell me the total quantity of products bought by the customer called \"rodrick heaney\".", "intent": "question", "entities": {"operation": "sum", "columns": ["sum", "customer_name", "order_quantity"]}}
+{"query": "list the id, genre and artist name of english songs ordered by rating.", "intent": "question", "entities": {"operation": "query", "columns": ["f_id", "rating", "languages"]}}
+{"query": "find all the forenames of distinct drivers who won in position 1 as driver standing and had more than 20 points?", "intent": "question", "entities": {"operation": "query", "columns": ["position", "distinct"]}}
+{"query": "list the number of invoices and the invoice total from california.", "intent": "question", "entities": {"operation": "sum", "columns": ["total", "billing_state"]}}
+{"query": "return the names of singers who are from uk and released an english song.", "intent": "question", "entities": {"operation": "query", "columns": ["artist_name", "country", "languages"]}}
+{"query": "what is the largest city in smallest state through which the mississippi runs", "intent": "question", "entities": {"operation": "query", "columns": ["area", "population", "river_name", "traverse", "state_name", "min", "city_name"]}}
+{"query": "please show each industry and the corresponding number of companies in that industry.", "intent": "question", "entities": {"operation": "query", "columns": ["industry"]}}
+{"query": "find the dates of assessment notes for students with first name \"fanny\".", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "date_of_notes"]}}
+{"query": "what are the nicknames of schools whose division is not 1?", "intent": "question", "entities": {"operation": "query", "columns": ["nickname", "division"]}}
+{"query": "what are the names of the enzymes used in the medicine  amisulpride that acts as inhibitors?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "list all the event names by year from the most recent to the oldest.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "year"]}}
+{"query": "what is the largest major?", "intent": "question", "entities": {"operation": "query", "columns": ["count", "major"]}}
+{"query": "what is the area of the new mexico state", "intent": "question", "entities": {"operation": "query", "columns": ["area", "state_name"]}}
+{"query": "display the employee number, name( first name and last name ), and salary for all employees who earn more than the average salary and who work in a department with any employee with a 'j' in their first name.", "intent": "question", "entities": {"operation": "average", "columns": ["salary", "department_id", "avg", "first_name", "employee_id"]}}
+{"query": "find the number and time of the train that goes from chennai to guruvayur.", "intent": "question", "entities": {"operation": "query", "columns": ["train_number", "origin"]}}
+{"query": "show the invoice number and the number of transactions for each invoice.", "intent": "question", "entities": {"operation": "query", "columns": ["invoice_number"]}}
+{"query": "how many flights do we have?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "what are the first names and last names of all the guests?", "intent": "question", "entities": {"operation": "query", "columns": ["guest_first_name"]}}
+{"query": "show all card type codes and the number of customers holding cards in each type.", "intent": "question", "entities": {"operation": "query", "columns": ["card_type_code"]}}
+{"query": "what is the average amount due for all the payments?", "intent": "question", "entities": {"operation": "average", "columns": ["amount_due", "avg"]}}
+{"query": "what is the name, location and seating for the most recently opened track?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["year_opened", "name"]}}
+{"query": "which schools do not have any player? give me the school locations.", "intent": "question", "entities": {"operation": "query", "columns": ["location", "school_id"]}}
+{"query": "what is the winery at which the wine with the highest score was made?", "intent": "question", "entities": {"operation": "query", "columns": ["winery", "score"]}}
+{"query": "what was the budget of the movie juno from 2007 ?", "intent": "question", "entities": {"operation": "query", "columns": ["budget", "release_year"]}}
+{"query": "what are the name and id of the team offering the lowest average salary?", "intent": "question", "entities": {"operation": "average", "columns": ["avg", "name", "salary", "team_id"]}}
+{"query": "find the id of the candidate who got the lowest oppose rate.", "intent": "question", "entities": {"operation": "query", "columns": ["candidate_id", "oppose_rate"]}}
+{"query": "what is the name of the youngest captain?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["age", "name"]}}
+{"query": "find the title and star rating of the movie that got the least rating star for each reviewer.", "intent": "question", "entities": {"operation": "query", "columns": ["title", "rid", "stars"]}}
+{"query": "how many faculty lines are there in \"san francisco state university\" in year 2004?", "intent": "question", "entities": {"operation": "count", "columns": ["faculty", "year"]}}
+{"query": "which statuses correspond to both cities that have a population over 1500 and cities that have a population lower than 500?", "intent": "question", "entities": {"operation": "query", "columns": ["population", "status"]}}
+{"query": "what was the conference name that approved trophic cascade ?", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "what are the name and active date of the customers whose contact channel code is email?", "intent": "question", "entities": {"operation": "query", "columns": ["customer_name", "channel_code"]}}
+{"query": "what are the names of all airports whose elevation is between -50 and 50?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "elevation"]}}
+{"query": "show the locations of parties with hosts older than 50.", "intent": "question", "entities": {"operation": "query", "columns": ["location", "age"]}}
+{"query": "list all vehicle id", "intent": "question", "entities": {"operation": "query", "columns": ["vehicle_id"]}}
+{"query": "show the name, location, open year for all tracks with a seating higher than the average.", "intent": "question", "entities": {"operation": "average", "columns": ["name", "seating", "avg"]}}
+{"query": "what are the full name, hire date, salary, and department id for employees without the letter m in their first name?", "intent": "question", "entities": {"operation": "query", "columns": ["first_name"]}}
+{"query": "show the product ids and the number of unique orders containing each product.", "intent": "question", "entities": {"operation": "query", "columns": ["product_id"]}}
+{"query": "what are the names of students who have more than one advisor?", "intent": "question", "entities": {"operation": "query", "columns": ["s_id", "name"]}}
+{"query": "find all actors from afghanistan", "intent": "question", "entities": {"operation": "query", "columns": ["name", "nationality"]}}
+{"query": "return me the abstract of \" making database systems usable \" .", "intent": "question", "entities": {"operation": "query", "columns": ["title", "abstract"]}}
+{"query": "what is the name of the media type that is least common across all tracks?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "name", "mediatypeid"]}}
+{"query": "give the names of mountains in alphabetical order.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name"]}}
+{"query": "find the name of the user who tweeted more than once, and number of tweets tweeted by them.", "intent": "question", "entities": {"operation": "query", "columns": ["uid", "name"]}}
+{"query": "list the name of staff who has been assigned multiple jobs.", "intent": "question", "entities": {"operation": "query", "columns": ["staff_id", "staff_name"]}}
+{"query": "return me all the organizations in \" north america \" .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "continent"]}}
+{"query": "return me all the papers in vldb conference in \" university of michigan \" .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "what are the names of managers in ascending order of level?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["level", "name"]}}
+{"query": "how many dorms are in the database?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "what are the different names of the product characteristics?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "list the name of tracks belongs to genre rock or media type is mpeg audio file.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "show the names of climbers and the heights of mountains they climb.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what is the least populous state", "intent": "question", "entities": {"operation": "query", "columns": ["min", "population", "state_name"]}}
+{"query": "chi", "intent": "question", "entities": {"operation": "query", "columns": ["venuename", "distinct"]}}
+{"query": "show all official native languages that contain the word \"english\".", "intent": "question", "entities": {"operation": "query", "columns": ["official_native_language"]}}
+{"query": "show the booking status code and the corresponding number of bookings.", "intent": "question", "entities": {"operation": "query", "columns": ["booking_status_code"]}}
+{"query": "what are the distinct billing countries of the invoices?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what is the project id and detail for the project with at least two documents?", "intent": "question", "entities": {"operation": "query", "columns": ["project_id"]}}
+{"query": "list datasets for semantic parsing", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "what are the student ids of students who don't have any allergies?", "intent": "question", "entities": {"operation": "query", "columns": ["stuid"]}}
+{"query": "what is the primary conference of the school that has the lowest acc percent score in the competition?", "intent": "question", "entities": {"operation": "query", "columns": ["primary_conference", "acc_percent"]}}
+{"query": "who wrote the most papers on syntactic parsing ?", "intent": "analysis", "entities": {"operation": "group", "columns": ["keyphrasename", "paperid", "distinct", "authorid", "count"]}}
+{"query": "return me the keywords, which have been contained by more than 10 papers of \" h. v. jagadish \" .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "keyword"]}}
+{"query": "what are the distinct ids of customers who made an order after any order that was cancelled?", "intent": "question", "entities": {"operation": "min", "columns": ["min", "order_status_code", "order_date", "distinct"]}}
+{"query": "what is the average snatch score of body builders?", "intent": "question", "entities": {"operation": "average", "columns": ["snatch", "avg"]}}
+{"query": "what is the name and capacity of the dorm with the fewest amount of amenities?", "intent": "analysis", "entities": {"operation": "group", "columns": ["dormid", "count", "dorm_name"]}}
+{"query": "what is the zip code of the hosue of the employee named janessa sawayn?", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "zip_postcode"]}}
+{"query": "how many products were not included in any order?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "product_id"]}}
+{"query": "find the first name and major of the students who are not allegry to soy.", "intent": "question", "entities": {"operation": "query", "columns": ["stuid", "fname", "allergy"]}}
+{"query": "show the top 3 most common colleges of players in match seasons.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "college"]}}
+{"query": "show first name and last name for all the students advised by michael goodrich.", "intent": "question", "entities": {"operation": "query", "columns": ["fname"]}}
+{"query": "what is the best restaurant in san francisco for french food ?", "intent": "question", "entities": {"operation": "query", "columns": ["max", "house_number", "rating", "city_name"]}}
+{"query": "list the names of all players who have a crossing score higher than 90 and prefer their right foot.", "intent": "question", "entities": {"operation": "query", "columns": ["crossing", "distinct"]}}
+{"query": "list the name of tracks belongs to genre rock or genre jazz.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "find employee with id and name of the country presently where (s)he is working.", "intent": "question", "entities": {"operation": "query", "columns": ["employee_id"]}}
+{"query": "how many states have smaller colleges than average?", "intent": "question", "entities": {"operation": "count", "columns": ["avg", "count", "enr"]}}
+{"query": "what is the number of players who have points less than 30 for each position?", "intent": "question", "entities": {"operation": "count", "columns": ["position", "count", "points"]}}
+{"query": "display the department id, full name (first and last name), salary for those employees who is highest salary in every department.", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "salary", "department_id"]}}
+{"query": "count the number of accounts.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "which attribute definitions have attribute value 0? give me the attribute name and attribute id.", "intent": "question", "entities": {"operation": "query", "columns": ["attribute_value", "attribute_name"]}}
+{"query": "how many members are in each party?", "intent": "question", "entities": {"operation": "count", "columns": ["party_id", "party_name"]}}
+{"query": "count the number of characteristics.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "for each competition, count the number of matches.", "intent": "question", "entities": {"operation": "count", "columns": ["competition", "count"]}}
+{"query": "count the number of regions.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "how many courses does the student with id 171 actually attend?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "student_id"]}}
+{"query": "how many bookings does each booking status have? list the booking status code and the number of corresponding bookings.", "intent": "question", "entities": {"operation": "count", "columns": ["booking_status_code"]}}
+{"query": "return me the number of cities that has \" panda express \" .", "intent": "question", "entities": {"operation": "query", "columns": ["count", "name"]}}
+{"query": "how many technicians are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "list the ids, names and market shares of all browsers.", "intent": "question", "entities": {"operation": "query", "columns": ["id"]}}
+{"query": "population of boulder", "intent": "question", "entities": {"operation": "query", "columns": ["population", "city_name"]}}
+{"query": "co-authors of noah a smith", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "which state has the smallest area that borders texas", "intent": "question", "entities": {"operation": "query", "columns": ["area", "min", "border", "state_name"]}}
+{"query": "what are the names of products that have never been ordered?", "intent": "question", "entities": {"operation": "query", "columns": ["product_name"]}}
+{"query": "what is the lowest point of all states through which the mississippi river runs through", "intent": "question", "entities": {"operation": "query", "columns": ["lowest_point", "river_name", "lowest_elevation", "traverse", "state_name"]}}
+{"query": "list of papers by subhasis chaudhuri", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "what are the names and scores of wines that are made of white color grapes?", "intent": "question", "entities": {"operation": "query", "columns": ["color", "name"]}}
+{"query": "find all movies written by \" matt damon \"", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "give me the theme and location of each party.", "intent": "question", "entities": {"operation": "query", "columns": ["party_theme"]}}
+{"query": "what is the first name and age of every student who lives in a dorm with a tv lounge?", "intent": "question", "entities": {"operation": "query", "columns": ["dormid", "fname", "amenity_name"]}}
+{"query": "return me the authors who have more than 10 papers in the vldb conference .", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "find the entry name of the catalog with the highest price (in usd).", "intent": "question", "entities": {"operation": "query", "columns": ["price_in_dollars", "catalog_entry_name"]}}
+{"query": "which emnlp 2010 papers have been cited the most ?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "year", "distinct", "citedpaperid"]}}
+{"query": "find the distinct winery of wines having price between 50 and 100.", "intent": "question", "entities": {"operation": "query", "columns": ["price", "distinct"]}}
+{"query": "where are some good arabics on buchanan in san francisco ?", "intent": "question", "entities": {"operation": "query", "columns": ["house_number", "city_name"]}}
+{"query": "what is the average bike availablility for stations not in palo alto?", "intent": "question", "entities": {"operation": "average", "columns": ["avg", "city", "bikes_available", "id", "station_id"]}}
+{"query": "how many states do not have rivers", "intent": "question", "entities": {"operation": "count", "columns": ["count", "traverse", "state_name"]}}
+{"query": "how many tasks does each project have? list the task count and the project detail.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "project_id"]}}
+{"query": "what is the first and last name of the student who played the most sports?", "intent": "analysis", "entities": {"operation": "group", "columns": ["stuid", "fname", "count"]}}
+{"query": "what is the state with the lowest population density", "intent": "question", "entities": {"operation": "query", "columns": ["density", "min", "state_name"]}}
+{"query": "where is a good arabic restaurant in mountain view ?", "intent": "question", "entities": {"operation": "query", "columns": ["house_number", "city_name"]}}
+{"query": "return the names of the regions affected by storms that had a death count of at least 10.", "intent": "question", "entities": {"operation": "query", "columns": ["region_name", "number_deaths"]}}
+{"query": "how many exhibitions has each artist had?", "intent": "question", "entities": {"operation": "count", "columns": ["name", "artist_id"]}}
+{"query": "return the different statuses of cities, ascending by frequency.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "status"]}}
+{"query": "which buildings does \"emma\" manage? give me the short names of the buildings.", "intent": "question", "entities": {"operation": "query", "columns": ["building_manager", "building_short_name"]}}
+{"query": "how many people reside in california", "intent": "question", "entities": {"operation": "count", "columns": ["population", "state_name"]}}
+{"query": "what is the country of the airport with the highest elevation?", "intent": "question", "entities": {"operation": "query", "columns": ["country", "elevation"]}}
+{"query": "what are the event details of the services that have the type code 'marriage'?", "intent": "question", "entities": {"operation": "query", "columns": ["service_type_code", "event_details"]}}
+{"query": "find the names and descriptions of courses that belong to the subject named \"computer science\".", "intent": "question", "entities": {"operation": "query", "columns": ["subject_name", "course_name"]}}
+{"query": "how many papers used imagenet dataset ?", "intent": "question", "entities": {"operation": "count", "columns": ["datasetname", "distinct"]}}
+{"query": "what campuses opened before 1800?", "intent": "question", "entities": {"operation": "query", "columns": ["campus", "year"]}}
+{"query": "what is the date when the document \"marry cv\" was stored?", "intent": "question", "entities": {"operation": "query", "columns": ["document_name", "date_stored"]}}
+{"query": "show the season, the player, and the name of the country that player belongs to.", "intent": "question", "entities": {"operation": "query", "columns": ["season"]}}
+{"query": "find names of all students who took some course and got a or c.", "intent": "question", "entities": {"operation": "query", "columns": ["stu_fname", "enroll_grade"]}}
+{"query": "find the names of courses taught by the tutor who has personal name \"julio\".", "intent": "question", "entities": {"operation": "query", "columns": ["personal_name", "course_name"]}}
+{"query": "show the name of each county along with the corresponding number of delegates from that county.", "intent": "question", "entities": {"operation": "query", "columns": ["county_id", "county_name"]}}
+{"query": "show all locations that have train stations with at least 15 platforms and train stations with more than 25 total passengers.", "intent": "question", "entities": {"operation": "sum", "columns": ["number_of_platforms", "distinct"]}}
+{"query": "how many customers are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "show the party that has the most people.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "party"]}}
+{"query": "what is the average unit price of rock tracks?", "intent": "question", "entities": {"operation": "average", "columns": ["name", "unitprice", "avg"]}}
+{"query": "show the most common nationality for journalists.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "nationality"]}}
+{"query": "in what year did ye cao publish the most papers", "intent": "analysis", "entities": {"operation": "group", "columns": ["authorname", "count", "distinct", "year"]}}
+{"query": "list players' first name and last name who received salary from team washington nationals in both 2005 and 2007.", "intent": "question", "entities": {"operation": "query", "columns": ["year", "name_first"]}}
+{"query": "for each type, how many ships are there?", "intent": "question", "entities": {"operation": "count", "columns": ["type"]}}
+{"query": "what are the student ids for everybody who worked for more than 10 hours per week on all sports?", "intent": "question", "entities": {"operation": "query", "columns": ["stuid", "hoursperweek"]}}
+{"query": "what are the names of all songs that are ordered by their resolution numbers?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["resolution", "song_name"]}}
+{"query": "how many rivers are there in us", "intent": "question", "entities": {"operation": "count", "columns": ["count", "river_name"]}}
+{"query": "what is the school code of the accounting department?", "intent": "question", "entities": {"operation": "query", "columns": ["school_code", "dept_name"]}}
+{"query": "show the cinema name and location for cinemas with capacity above average.", "intent": "question", "entities": {"operation": "average", "columns": ["capacity", "name", "avg"]}}
+{"query": "what is the shortest river in texas", "intent": "question", "entities": {"operation": "query", "columns": ["min", "length", "river_name", "traverse"]}}
+{"query": "what is the most common competition type?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "competition_type"]}}
+{"query": "what states contain at least one major rivers", "intent": "question", "entities": {"operation": "query", "columns": ["length", "traverse"]}}
+{"query": "return the founder of sony.", "intent": "question", "entities": {"operation": "query", "columns": ["founder", "name"]}}
+{"query": "for each position, what is the minimum time students spent practicing?", "intent": "question", "entities": {"operation": "min", "columns": ["ppos", "min", "hs"]}}
+{"query": "what is the location with the most cinemas opened in year 2010 or later?", "intent": "analysis", "entities": {"operation": "group", "columns": ["location", "openning_year", "count"]}}
+{"query": "how many movies did \" quentin tarantino \" direct after 2010 ?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "what year was \" benedict cumberbatch \" born ?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "birth_year"]}}
+{"query": "what are the durations of the longest and the shortest tracks in milliseconds?", "intent": "question", "entities": {"operation": "max", "columns": ["max", "milliseconds"]}}
+{"query": "give me a restaurant in alameda ?", "intent": "question", "entities": {"operation": "query", "columns": ["house_number", "city_name"]}}
+{"query": "how many gymnasts are from each hometown?", "intent": "question", "entities": {"operation": "count", "columns": ["hometown"]}}
+{"query": "give me a good arabic in mountain view ?", "intent": "question", "entities": {"operation": "query", "columns": ["house_number", "city_name"]}}
+{"query": "what are the ids for courses that were offered in both fall of 2009 and spring of 2010?", "intent": "question", "entities": {"operation": "query", "columns": ["semester", "course_id"]}}
+{"query": "what is the average quantity of stocks?", "intent": "question", "entities": {"operation": "average", "columns": ["quantity", "avg"]}}
+{"query": "how many patients' prescriptions are made by physician john dorian?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name", "ssn"]}}
+{"query": "show all video game types.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what are the names and players of all the clubs?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "how many papers has christopher d. manning written ?", "intent": "question", "entities": {"operation": "count", "columns": ["authorname", "distinct"]}}
+{"query": "find the year which offers the largest number of courses.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "year"]}}
+{"query": "for each position, what is the average number of points for players in that position?", "intent": "question", "entities": {"operation": "average", "columns": ["position", "points"]}}
+{"query": "how many gymnasts are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "Give me a forecast of demand for next season", "intent": "prediction", "entities": {"operation": "predict", "columns": ["demand"]}}
+{"query": "show the id of the employee named ebba.", "intent": "question", "entities": {"operation": "query", "columns": ["employee_name", "employee_id"]}}
+{"query": "list name, dates active, and number of deaths for all storms with at least 1 death.", "intent": "question", "entities": {"operation": "query", "columns": ["number_deaths", "name"]}}
+{"query": "how many regions are affected?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find the number of members of club \"pen and paper gaming\".", "intent": "question", "entities": {"operation": "count", "columns": ["count", "clubname"]}}
+{"query": "euclidean distance papers citing nips papers", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "which teacher teaches the most students? give me the first name and last name of the teacher.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "firstname"]}}
+{"query": "for each director who directed more than one movie, what are the titles and dates of release for all those movies?", "intent": "question", "entities": {"operation": "query", "columns": ["title"]}}
+{"query": "what states have rivers named ohio", "intent": "question", "entities": {"operation": "query", "columns": ["river_name", "traverse"]}}
+{"query": "find the names of stadiums which have never had any event.", "intent": "question", "entities": {"operation": "query", "columns": ["stadium_id", "name", "id"]}}
+{"query": "list the name, born state and age of the heads of departments ordered by age.", "intent": "question", "entities": {"operation": "query", "columns": ["age", "name"]}}
+{"query": "what are the heights of perpetrators in descending order of the number of people they injured?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["height", "injured"]}}
+{"query": "what are the first and last names of the top 10 longest-serving employees?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["first_name", "hire_date"]}}
+{"query": "who is the composer of track fast as a shark?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "composer"]}}
+{"query": "show all distinct publishers for books.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "give all information regarding instructors, in order of salary from least to greatest.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["salary"]}}
+{"query": "find the movies with the highest average rating. return the movie titles and average rating.", "intent": "question", "entities": {"operation": "average", "columns": ["title", "mid", "stars", "avg"]}}
+{"query": "what are the names of studios that have made two or more films?", "intent": "question", "entities": {"operation": "query", "columns": ["studio"]}}
+{"query": "how long is rio grande", "intent": "question", "entities": {"operation": "query", "columns": ["length", "river_name"]}}
+{"query": "what is the average attendance of stadiums with capacity percentage higher than 100%?", "intent": "question", "entities": {"operation": "average", "columns": ["capacity_percentage", "average_attendance"]}}
+{"query": "what are the different cities where students live?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "how long does student linda smith spend on the restaurant in total?", "intent": "question", "entities": {"operation": "sum", "columns": ["spent", "fname", "sum"]}}
+{"query": "what are the top 10 customers' first and last names by total number of orders and how many orders did they make?", "intent": "question", "entities": {"operation": "count", "columns": ["first_name", "id", "count"]}}
+{"query": "what are the names, color descriptions, and product descriptions for products in the 'herbs' category?", "intent": "question", "entities": {"operation": "query", "columns": ["product_name", "product_category_code"]}}
+{"query": "how many users have reviewed irish pub in dallas ?", "intent": "question", "entities": {"operation": "count", "columns": ["city", "count"]}}
+{"query": "how many wrestlers are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "which party has two or more records?", "intent": "question", "entities": {"operation": "query", "columns": ["party"]}}
+{"query": "how many faculty lines are there in the university that conferred the most number of degrees in year 2002?", "intent": "question", "entities": {"operation": "count", "columns": ["faculty", "degrees", "year"]}}
+{"query": "show the status of the city that has hosted the greatest number of competitions.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "host_city_id", "status"]}}
+{"query": "give the order ids for all orders, as well as the total product quantity in each.", "intent": "question", "entities": {"operation": "sum", "columns": ["order_id", "product_quantity"]}}
+{"query": "list all document type codes and document type names.", "intent": "question", "entities": {"operation": "query", "columns": ["document_type_code"]}}
+{"query": "find the name of the department that has the fewest members.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "dno", "dname"]}}
+{"query": "return the different nominees of musicals that have an award that is not the tony award.", "intent": "question", "entities": {"operation": "query", "columns": ["award", "distinct"]}}
+{"query": "what are the ids of instructors who taught in the fall of 2009 but not in the spring of 2010?", "intent": "question", "entities": {"operation": "query", "columns": ["semester", "id"]}}
+{"query": "what are the names of wrestlers and the elimination moves?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "find the id of the courses that do not have any prerequisite?", "intent": "question", "entities": {"operation": "query", "columns": ["course_id"]}}
+{"query": "how many lesson does customer with first name ray took?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "first_name"]}}
+{"query": "what are the categories of music festivals for which there have been more than 1 music festival?", "intent": "question", "entities": {"operation": "query", "columns": ["category"]}}
+{"query": "what is the area of all the states combined", "intent": "question", "entities": {"operation": "query", "columns": ["area", "sum"]}}
+{"query": "find the actor who played \" alan turing \" in the movie \" the imitation game \"", "intent": "question", "entities": {"operation": "query", "columns": ["name", "role"]}}
+{"query": "which authors have submitted to more than one workshop?", "intent": "question", "entities": {"operation": "query", "columns": ["author"]}}
+{"query": "what are the names of all reviewers that have rated 3 or more movies?", "intent": "question", "entities": {"operation": "query", "columns": ["rid", "name"]}}
+{"query": "how many states are there", "intent": "question", "entities": {"operation": "count", "columns": ["count", "state_name"]}}
+{"query": "what are the names of actors, ordered alphabetically?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name"]}}
+{"query": "who published at acl 2016 ?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct", "year"]}}
+{"query": "how many customers are living in city \"lake geovannyton\"?", "intent": "question", "entities": {"operation": "count", "columns": ["city", "count"]}}
+{"query": "find the average age of female students.", "intent": "question", "entities": {"operation": "average", "columns": ["age", "sex", "avg"]}}
+{"query": "what are the dates of ceremony and results for each music festival?", "intent": "question", "entities": {"operation": "query", "columns": ["date_of_ceremony"]}}
+{"query": "what are the countries of markets and their corresponding years of market estimation?", "intent": "question", "entities": {"operation": "query", "columns": ["country"]}}
+{"query": "what is the reviewer name, film title, movie rating, and rating date  for every movie ordered by reviewer name, movie title, then finally rating?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name"]}}
+{"query": "in what city was \" kevin spacey \" born ?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "birth_city"]}}
+{"query": "how many citations does luke zettlemoyer have per year", "intent": "question", "entities": {"operation": "count", "columns": ["authorname", "year", "distinct", "citedpaperid"]}}
+{"query": "how many video games do you have?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "which state has the largest density", "intent": "question", "entities": {"operation": "query", "columns": ["density", "max", "state_name"]}}
+{"query": "show the facility codes of apartments with more than 4 bedrooms.", "intent": "question", "entities": {"operation": "query", "columns": ["bedroom_count", "facility_code"]}}
+{"query": "return the minimum, average and maximum distances traveled across all aircrafts.", "intent": "question", "entities": {"operation": "average", "columns": ["distance", "min"]}}
+{"query": "what is the state with the highest elevation in the united states", "intent": "question", "entities": {"operation": "query", "columns": ["max", "highest_elevation", "state_name"]}}
+{"query": "what are all the publication titles by donald e knuth ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "return me all the papers in pvldb in \" university of michigan \" .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "what are the companies and investors that correspond to each entrepreneur?", "intent": "question", "entities": {"operation": "query", "columns": ["company"]}}
+{"query": "sort the names of all counties in ascending order of population.", "intent": "question", "entities": {"operation": "query", "columns": ["population", "county_name"]}}
+{"query": "what is the product category description and unit of measurement of category \"herbs\"?", "intent": "question", "entities": {"operation": "query", "columns": ["product_category_description", "product_category_code"]}}
+{"query": "list the name of ships whose nationality is not \"united states\".", "intent": "question", "entities": {"operation": "query", "columns": ["name", "nationality"]}}
+{"query": "find all the product whose name contains the word \"scanner\".", "intent": "question", "entities": {"operation": "query", "columns": ["product"]}}
+{"query": "what are the tracks that dean peeters bought?", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "name"]}}
+{"query": "what has sharon goldwater published ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "what are the valid from and valid to dates for the card with the number 4560596484842?", "intent": "question", "entities": {"operation": "query", "columns": ["card_number", "date_valid_from"]}}
+{"query": "return the names of tracks that have no had any races.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "track_id"]}}
+{"query": "what is the customer last name, id and phone number with most number of orders?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "customer_id", "customer_last_name"]}}
+{"query": "show all directors.", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "which type of policy is most frequently used? give me the policy type code.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "policy_type_code"]}}
+{"query": "list all club names in descending alphabetical order.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what is the population of boulder", "intent": "question", "entities": {"operation": "query", "columns": ["population", "city_name"]}}
+{"query": "what is the organisation type and id of the organisation which has the most number of research staff?", "intent": "analysis", "entities": {"operation": "group", "columns": ["organisation_id", "count", "organisation_type"]}}
+{"query": "select the average price of each manufacturer's products, showing the manufacturer's name.", "intent": "question", "entities": {"operation": "average", "columns": ["name", "price", "avg"]}}
+{"query": "what are the names of all products?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what datasets have jitendra malik used", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "What's the projected value for Q4?", "intent": "prediction", "entities": {"operation": "predict"}}
+{"query": "for all directors who directed more than one movie, return the titles of all movies directed by them, along with the director name. sort by director name, then movie title.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["director", "title"]}}
+{"query": "list all the distinct cities", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "show the team that have at least two technicians.", "intent": "question", "entities": {"operation": "query", "columns": ["team"]}}
+{"query": "what is the total rating of channel for each channel owner?", "intent": "question", "entities": {"operation": "sum", "columns": ["rating_in_percent", "owner", "sum"]}}
+{"query": "find the name of the most expensive product.", "intent": "question", "entities": {"operation": "query", "columns": ["product_name", "product_price"]}}
+{"query": "how many sections does course acct-211 has?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "crs_code"]}}
+{"query": "find the names of the top 10 airlines that operate the most number of routes.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "name", "alid"]}}
+{"query": "give me a list of distinct product ids from orders placed between 1975-01-01 and 1976-01-01?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct", "date_order_placed"]}}
+{"query": "show the names of members and the locations of colleges they go to in ascending alphabetical order of member names.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name"]}}
+{"query": "what is the first name and gpa of every student that has a gpa lower than average?", "intent": "question", "entities": {"operation": "average", "columns": ["stu_gpa", "stu_fname", "avg"]}}
+{"query": "list the names of players that do not have coaches.", "intent": "question", "entities": {"operation": "query", "columns": ["player_id", "player_name"]}}
+{"query": "what is the maximum, minimum, and average amount of money outsanding for all customers?", "intent": "question", "entities": {"operation": "average", "columns": ["amount_outstanding", "max"]}}
+{"query": "find the emails and phone numbers of all the customers, ordered by email address and phone number.", "intent": "question", "entities": {"operation": "query", "columns": ["email_address"]}}
+{"query": "find the login name of the course author that teaches the course with name \"advanced database\".", "intent": "question", "entities": {"operation": "query", "columns": ["login_name", "course_name"]}}
+{"query": "what are the forename and surname of the driver who has the smallest laptime?", "intent": "question", "entities": {"operation": "query", "columns": ["milliseconds", "forename"]}}
+{"query": "what are the most common types of interactions between enzymes and medicine, and how many types are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "interaction_type"]}}
+{"query": "show the investors shared by entrepreneurs that requested more than 140000 and entrepreneurs that requested less than 120000.", "intent": "question", "entities": {"operation": "query", "columns": ["investor", "money_requested"]}}
+{"query": "return me the organization \" h. v. jagadish \" is in .", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "count the number of universities that do not participate in the baketball match.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "school_id"]}}
+{"query": "what are the names and ids of the different categories, and how many films are in each?", "intent": "question", "entities": {"operation": "count", "columns": ["category_id", "name"]}}
+{"query": "what is the average age of female (sex is f) students?", "intent": "question", "entities": {"operation": "average", "columns": ["age", "sex", "avg"]}}
+{"query": "what are the names and descriptions of the products that are of 'cutlery' type and have daily hire cost lower than 20?", "intent": "question", "entities": {"operation": "query", "columns": ["product_name", "product_type_code"]}}
+{"query": "what is the first name of the author with last name \"ueno\"?", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "lname"]}}
+{"query": "what are the names of all pilots listed by descending age?", "intent": "question", "entities": {"operation": "query", "columns": ["age", "name"]}}
+{"query": "what is the description for the budget type with code org?", "intent": "question", "entities": {"operation": "query", "columns": ["budget_type_code", "budget_type_description"]}}
+{"query": "what is the \"active to date\" of the latest contact channel used by \"tillman ernser\"?", "intent": "question", "entities": {"operation": "max", "columns": ["max", "customer_name", "active_to_date"]}}
+{"query": "display the employee name ( first name and last name ) and hire date for all employees in the same department as clara excluding clara.", "intent": "visualization", "entities": {"operation": "visualize", "columns": ["first_name", "department_id"]}, "visualization_type": "bar"}
+{"query": "what are the names of customers who have taken both mortgage and auto loans?", "intent": "question", "entities": {"operation": "query", "columns": ["loan_type", "cust_name"]}}
+{"query": "what are the names and ids of customers whose address contains tn?", "intent": "question", "entities": {"operation": "query", "columns": ["customer_name", "customer_address"]}}
+{"query": "display the employee id and salary of all employees who report to payam (first name).", "intent": "visualization", "entities": {"operation": "visualize", "columns": ["first_name", "manager_id", "employee_id"]}, "visualization_type": "bar"}
+{"query": "what are the employee ids for those who had two or more jobs.", "intent": "question", "entities": {"operation": "query", "columns": ["employee_id"]}}
+{"query": "what is ohad shamir 's most cited paper ?", "intent": "analysis", "entities": {"operation": "group", "columns": ["authorname", "count", "distinct", "citedpaperid"]}}
+{"query": "what is the famous release date of the artist with the oldest age?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["age", "famous_release_date"]}}
+{"query": "find the names of the top 3 departments that provide the largest amount of courses?", "intent": "question", "entities": {"operation": "query", "columns": ["count", "dept_name"]}}
+{"query": "show all countries and the number of people from each country.", "intent": "question", "entities": {"operation": "query", "columns": ["country"]}}
+{"query": "what are the payment date of the payment with amount paid higher than 300 or with payment type is 'check'", "intent": "question", "entities": {"operation": "query", "columns": ["payment_date", "amount_paid"]}}
+{"query": "what is the author of the submission with the highest score?", "intent": "question", "entities": {"operation": "query", "columns": ["scores", "author"]}}
+{"query": "show the average, minimum, and maximum capacity for all the cinemas opened in year 2011 or later.", "intent": "question", "entities": {"operation": "average", "columns": ["capacity", "openning_year", "avg"]}}
+{"query": "what are the player name, number of matches, and information source for players who do not suffer from injury of 'knee problem'?", "intent": "question", "entities": {"operation": "query", "columns": ["injury", "player"]}}
+{"query": "find the names of the channels that are broadcast in the morning.", "intent": "question", "entities": {"operation": "query", "columns": ["time_of_day", "name"]}}
+{"query": "count the number of different countries that climbers are from.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "list the project details of the projects which did not hire any staff for a researcher role.", "intent": "question", "entities": {"operation": "query", "columns": ["project_id", "project_details", "role_code"]}}
+{"query": "which rooms cost between 120 and 150? give me the room names.", "intent": "question", "entities": {"operation": "query", "columns": ["roomname", "baseprice"]}}
+{"query": "what is the name and detail of each staff member?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "how many papers does michael i. jordan have in 2016 ?", "intent": "question", "entities": {"operation": "count", "columns": ["authorname", "paperid", "distinct"]}}
+{"query": "give the name of the student in the history department with the most credits.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["tot_cred", "name", "dept_name"]}}
+{"query": "what are the names and arrival times of trains?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what are the three colleges from which the most players are from?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "college"]}}
+{"query": "find courses that ran in fall 2009 but not in spring 2010.", "intent": "question", "entities": {"operation": "query", "columns": ["semester", "course_id"]}}
+{"query": "what are the name and typical buying and selling prices of the products that have color described as \"yellow\"?", "intent": "question", "entities": {"operation": "query", "columns": ["color_description", "product_name"]}}
+{"query": "how many states have a city named springfield", "intent": "question", "entities": {"operation": "count", "columns": ["count", "city_name", "state_name"]}}
+{"query": "return the names of artists and the themes of their exhibitions that had a ticket price higher than average.", "intent": "question", "entities": {"operation": "average", "columns": ["theme", "ticket_price", "avg"]}}
+{"query": "where us the club named \"tennis club\" located?", "intent": "question", "entities": {"operation": "query", "columns": ["clubname", "clublocation"]}}
+{"query": "how many customers live in prague city?", "intent": "question", "entities": {"operation": "count", "columns": ["city", "count"]}}
+{"query": "return the average age across all artists.", "intent": "question", "entities": {"operation": "average", "columns": ["age", "avg"]}}
+{"query": "what are the names of all races held after 2000 in spain?", "intent": "question", "entities": {"operation": "query", "columns": ["country", "distinct"]}}
+{"query": "what is the number of faculty lines in campus \"long beach state university\" in 2002?", "intent": "question", "entities": {"operation": "query", "columns": ["faculty", "year"]}}
+{"query": "count the total number of students.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "list the names of editors who are older than 25.", "intent": "question", "entities": {"operation": "query", "columns": ["age", "name"]}}
+{"query": "what are the open dates and years for the shop named apple?", "intent": "question", "entities": {"operation": "query", "columns": ["open_date", "shop_name"]}}
+{"query": "what is the software platform that is most common amongst all devices?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "software_platform"]}}
+{"query": "which teachers teach in classroom 110? give me their first names.", "intent": "question", "entities": {"operation": "query", "columns": ["classroom", "firstname"]}}
+{"query": "return me the citations of each paper in the vldb conference .", "intent": "question", "entities": {"operation": "query", "columns": ["citation_num", "name"]}}
+{"query": "which actors were born in tehran", "intent": "question", "entities": {"operation": "query", "columns": ["name", "birth_city"]}}
+{"query": "how many female actors were born in \" new york city \" after 1980 ?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "birth_city"]}}
+{"query": "how many students play each sport?", "intent": "question", "entities": {"operation": "count", "columns": ["sportname"]}}
+{"query": "which minister left office the latest?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["minister", "left_office"]}}
+{"query": "what is the average weight of all players?", "intent": "question", "entities": {"operation": "average", "columns": ["avg", "weight"]}}
+{"query": "list the top 5 genres by number of tracks. list genres name and total tracks.", "intent": "question", "entities": {"operation": "sum", "columns": ["count", "name", "id"]}}
+{"query": "find the id and name of the most expensive base price room.", "intent": "question", "entities": {"operation": "query", "columns": ["baseprice", "roomid"]}}
+{"query": "find the first names of professors who are teaching more than one class.", "intent": "question", "entities": {"operation": "query", "columns": ["prof_num", "emp_fname"]}}
+{"query": "what are the types of film market estimations in year 1995?", "intent": "question", "entities": {"operation": "query", "columns": ["type", "year"]}}
+{"query": "list all channel names ordered by their rating in percent from big to small.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "rating_in_percent"]}}
+{"query": "what is the name of the movie that has been reviewed the most?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "mid", "title"]}}
+{"query": "which nations have both hosts of age above 45 and hosts of age below 35?", "intent": "question", "entities": {"operation": "query", "columns": ["age", "nationality"]}}
+{"query": "count the number of parties.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "show the name, street address, and number of floors for all buildings ordered by the number of floors.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["floors", "name"]}}
+{"query": "what is the name of the entrepreneur with the greatest weight?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name", "weight"]}}
+{"query": "how many companies are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "list the names of climbers in descending order of points.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "points"]}}
+{"query": "which marketing region has the most drama workshop groups? give me the region code.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "marketing_region_code"]}}
+{"query": "what is the address of the restaurant subway?", "intent": "question", "entities": {"operation": "query", "columns": ["resname", "address"]}}
+{"query": "return me the papers on vldb conference .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "what are the names of the campus that have more faculties in 2002 than the maximum number in orange county?", "intent": "question", "entities": {"operation": "max", "columns": ["campus", "max", "faculty", "year"]}}
+{"query": "how many sports do we have?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "list all the directors of movies about nuclear weapons", "intent": "question", "entities": {"operation": "query", "columns": ["name", "keyword"]}}
+{"query": "how many papers are in deep learning ?", "intent": "question", "entities": {"operation": "count", "columns": ["keyphrasename", "distinct"]}}
+{"query": "give the number of students living in either hkg or chi.", "intent": "question", "entities": {"operation": "count", "columns": ["city_code", "count"]}}
+{"query": "what are the names and ids of artists with 3 or more albums, listed in alphabetical order?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "artistid"]}}
+{"query": "what is the highest mountain in us", "intent": "question", "entities": {"operation": "query", "columns": ["mountain_altitude", "max", "mountain_name"]}}
+{"query": "list the names of technicians who have not been assigned to repair machines.", "intent": "question", "entities": {"operation": "query", "columns": ["technician_id", "name"]}}
+{"query": "what is the name and distance for aircraft with id 12?", "intent": "question", "entities": {"operation": "query", "columns": ["aid", "name"]}}
+{"query": "list the research staff details, and order in ascending order.", "intent": "question", "entities": {"operation": "query", "columns": ["staff_details"]}}
+{"query": "how many bank branches are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "what is the name of the party form that is most common?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "form_id", "form_name"]}}
+{"query": "papers published in the area of question answering", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "return the name and number of reservations made for each of the rooms.", "intent": "question", "entities": {"operation": "query", "columns": ["roomname", "room"]}}
+{"query": "what is the name of the shop that has the most different kinds of devices in stock?", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "shop_id", "shop_name"]}}
+{"query": "find the country that the most papers are affiliated with.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "country"]}}
+{"query": "what are the details of all sales and purchases?", "intent": "question", "entities": {"operation": "query", "columns": ["sales_details", "purchase_details"]}}
+{"query": "what is the the phone number of nancy edwards?", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "phone"]}}
+{"query": "what are the first names of all students who are older than 20?", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "age"]}}
+{"query": "show the names for all females from canada having a wedding in year 2016.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "year"]}}
+{"query": "how many major rivers cross ohio", "intent": "question", "entities": {"operation": "count", "columns": ["count", "length", "river_name"]}}
+{"query": "count the number of times the team \"boston red stockings\" lost in 2009 postseason.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name"]}}
+{"query": "how many members of club \"bootup baltimore\" are younger than 18?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "clubname"]}}
+{"query": "what are the phone numbers of customers using the policy with the code \"life insurance\"?", "intent": "question", "entities": {"operation": "query", "columns": ["customer_phone", "policy_type_code"]}}
+{"query": "show the names of the drivers without a school bus.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "driver_id"]}}
+{"query": "what are the first and last name for those employees who works either in department 70 or 90?", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "department_id"]}}
+{"query": "authors who collaborated with noah a smith", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "what is the detail of the location uk gallery?", "intent": "question", "entities": {"operation": "query", "columns": ["location_name", "other_details"]}}
+{"query": "return me the total citations of the papers in \" university of michigan \" .", "intent": "question", "entities": {"operation": "sum", "columns": ["citation_num", "name", "sum"]}}
+{"query": "what are the names of all tracks that are on playlists titled movies?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "how many departments are in the division as?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "division"]}}
+{"query": "how long is the longest river in texas", "intent": "question", "entities": {"operation": "query", "columns": ["length", "max", "traverse"]}}
+{"query": "tail papers in nips", "intent": "question", "entities": {"operation": "query", "columns": ["keyphrasename", "distinct"]}}
+{"query": "find the customer name and date of the orders that have the status \"delivered\".", "intent": "question", "entities": {"operation": "query", "columns": ["order_status", "customer_name"]}}
+{"query": "what are the names and descriptions of the photos taken at the tourist attraction \"film festival\"?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what are the names of tourist attraction that alison visited but rosalind did not visit?", "intent": "question", "entities": {"operation": "query", "columns": ["tourist_details", "name"]}}
+{"query": "what are the ids and details for all organizations that have grants of more than 6000 dollars?", "intent": "question", "entities": {"operation": "query", "columns": ["organisation_id", "grant_amount"]}}
+{"query": "select the code of the product that is cheapest in each product category.", "intent": "analysis", "entities": {"operation": "group", "columns": ["name", "price", "code"]}}
+{"query": "show the names of cities in counties that have a crime rate less than 100.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "county_id", "crime_rate"]}}
+{"query": "return me the papers in vldb conference containing keyword \" information retrieval \" .", "intent": "question", "entities": {"operation": "query", "columns": ["name", "title"]}}
+{"query": "who has friends that are younger than the average age?", "intent": "question", "entities": {"operation": "average", "columns": ["age", "distinct", "avg"]}}
+{"query": "give me a restaurant on bethel island rd in bethel island ?", "intent": "question", "entities": {"operation": "query", "columns": ["house_number", "city_name"]}}
+{"query": "what are the ids of suppliers which have an average amount purchased of above 50000 or below 30000?", "intent": "question", "entities": {"operation": "average", "columns": ["supplier_id", "total_amount_purchased"]}}
+{"query": "find the name of the ships that are steered by both a captain with midshipman rank and a captain with lieutenant rank.", "intent": "question", "entities": {"operation": "query", "columns": ["name", "rank"]}}
+{"query": "what is the average number of hours spent practicing for students who got rejected?", "intent": "question", "entities": {"operation": "average", "columns": ["decision", "hs", "avg"]}}
+{"query": "please show different denominations and the corresponding number of schools in descending order.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "denomination"]}}
+{"query": "how many actors are in the movie \" saving private ryan \" ?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "title"]}}
+{"query": "show all video games and their types in the order of their names.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["gname"]}}
+{"query": "how many female dependents are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "sex"]}}
+{"query": "how many debates are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "what are the last names that are used by customers and staff?", "intent": "question", "entities": {"operation": "query", "columns": ["last_name"]}}
+{"query": "what are the 3 counties that have the smallest population? give me the county names.", "intent": "question", "entities": {"operation": "query", "columns": ["population", "county_name"]}}
+{"query": "what are the names of everybody sorted by age in descending order?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["age", "name"]}}
+{"query": "what are the distinct first names of the students who have vice president votes and reside in a city whose city code is not pit?", "intent": "question", "entities": {"operation": "query", "columns": ["city_code", "distinct"]}}
+{"query": "find the phone number and email address of customer \"harold\".", "intent": "question", "entities": {"operation": "query", "columns": ["customer_name", "customer_phone"]}}
+{"query": "where can we find a restaurant on bethel island rd in bethel island ?", "intent": "question", "entities": {"operation": "query", "columns": ["house_number", "city_name"]}}
+{"query": "find the number of routes whose destination airports are in canada.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "country"]}}
+{"query": "what is the smallest state that borders texas", "intent": "question", "entities": {"operation": "query", "columns": ["area", "min", "border", "state_name"]}}
+{"query": "show student ids who are female and play football.", "intent": "question", "entities": {"operation": "query", "columns": ["stuid", "sex", "sportname"]}}
+{"query": "find the names of users whose emails contain ‘superstar’ or ‘edu’.", "intent": "question", "entities": {"operation": "query", "columns": ["email", "name"]}}
+{"query": "show the most common position of players in match seasons.", "intent": "analysis", "entities": {"operation": "group", "columns": ["position", "count"]}}
+{"query": "find the distinct names of all races held between 2014 and 2017?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct", "year"]}}
+{"query": "what is the total number of professors with a ph.d. ?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "prof_high_degree"]}}
+{"query": "list the names of the employees who authorized the destruction of documents and the employees who destroyed the corresponding documents.", "intent": "question", "entities": {"operation": "query", "columns": ["employee_name"]}}
+{"query": "first deep learning paper", "intent": "analysis", "entities": {"operation": "group", "columns": ["keyphrasename", "distinct", "year"]}}
+{"query": "what are the ids and names of the companies that operated more than one flight?", "intent": "question", "entities": {"operation": "query", "columns": ["id"]}}
+{"query": "what are the grade number and classroom number of each class in the list?", "intent": "question", "entities": {"operation": "query", "columns": ["distinct"]}}
+{"query": "what is the title and director for the movie with highest worldwide gross in the year 2000 or before?", "intent": "question", "entities": {"operation": "query", "columns": ["gross_worldwide", "title", "year"]}}
+{"query": "for each fourth-grade classroom, show the classroom number and the total number of students using it.", "intent": "question", "entities": {"operation": "sum", "columns": ["classroom", "grade"]}}
+{"query": "find the name of the customers who have at most two orders.", "intent": "question", "entities": {"operation": "query", "columns": ["customer_name", "customer_id"]}}
+{"query": "what is the shortest river in the united states", "intent": "question", "entities": {"operation": "query", "columns": ["min", "length", "river_name"]}}
+{"query": "how high is guadalupe peak", "intent": "question", "entities": {"operation": "query", "columns": ["highest_elevation", "highest_point"]}}
+{"query": "what are the names of organizations, ordered by the date they were formed, ascending?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["organization_name", "date_formed"]}}
+{"query": "show institution types, along with the number of institutions and total enrollment for each type.", "intent": "question", "entities": {"operation": "sum", "columns": ["enrollment", "type"]}}
+{"query": "which apartment type has the largest number of total rooms? return the apartment type code, its number of bathrooms and number of bedrooms.", "intent": "question", "entities": {"operation": "sum", "columns": ["apt_type_code", "sum", "room_count"]}}
+{"query": "how many trips started from mountain view city and ended at palo alto city?", "intent": "question", "entities": {"operation": "count", "columns": ["city", "count"]}}
+{"query": "what are the names of enzymes in descending order?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name"]}}
+{"query": "find the name of physicians whose position title contains the word 'senior'.", "intent": "question", "entities": {"operation": "query", "columns": ["position", "name"]}}
+{"query": "how many cards does customer art turcotte have?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "customer_first_name"]}}
+{"query": "count the number of different ranks of captain.", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "how many faculty is there in total in the year of 2002?", "intent": "question", "entities": {"operation": "count", "columns": ["year", "faculty", "sum"]}}
+{"query": "please show the most common reigns of wrestlers.", "intent": "analysis", "entities": {"operation": "group", "columns": ["count", "reign"]}}
+{"query": "what is the placement date of the order whose invoice number is 10?", "intent": "question", "entities": {"operation": "query", "columns": ["invoice_number", "date_order_placed"]}}
+{"query": "find the name of the products that have the color description \"red\" and have the characteristic name \"fast\".", "intent": "question", "entities": {"operation": "query", "columns": ["color_description", "product_name"]}}
+{"query": "what is the average prices of wines for each each?", "intent": "question", "entities": {"operation": "average", "columns": ["year", "price", "avg"]}}
+{"query": "what are the the songs in volumes, listed in ascending order?", "intent": "question", "entities": {"operation": "query", "columns": ["song"]}}
+{"query": "what is the last name of the youngest student?", "intent": "question", "entities": {"operation": "min", "columns": ["lname", "min", "age"]}}
+{"query": "what is the oldest log id and its corresponding problem id?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["problem_log_id", "log_entry_date"]}}
+{"query": "what is the email and phone number of astrid gruber the customer?", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "email"]}}
+{"query": "what are the emails of employees with null commission, salary between 7000 and 12000, and who work in department 50?", "intent": "question", "entities": {"operation": "query", "columns": ["commission_pct", "email"]}}
+{"query": "find the first and last names of people who payed more than the rooms' base prices.", "intent": "question", "entities": {"operation": "query", "columns": ["firstname", "rate"]}}
+{"query": "how many orders does lucas mancini has?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "first_name"]}}
+{"query": "what are the names of the states that have some college students playing in the positions of goalie and mid-field?", "intent": "question", "entities": {"operation": "query", "columns": ["ppos", "state"]}}
+{"query": "name all the rivers in illinois", "intent": "question", "entities": {"operation": "query", "columns": ["river_name", "traverse"]}}
+{"query": "find the count of universities whose campus fee is greater than the average campus fee.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "campusfee", "avg"]}}
+{"query": "in which year did city \"taizhou ( zhejiang )\" serve as a host city?", "intent": "question", "entities": {"operation": "query", "columns": ["city", "year"]}}
+{"query": "what river flows through illinois", "intent": "question", "entities": {"operation": "query", "columns": ["river_name", "traverse"]}}
+{"query": "list the authors of submissions in ascending order of scores.", "intent": "question", "entities": {"operation": "query", "columns": ["scores", "author"]}}
+{"query": "find the number of tips written in each month", "intent": "question", "entities": {"operation": "query", "columns": ["count", "month"]}}
+{"query": "what are the names of enzymes whose product is not 'heme'?", "intent": "question", "entities": {"operation": "query", "columns": ["name", "product"]}}
+{"query": "show the number of transactions for different investors.", "intent": "question", "entities": {"operation": "query", "columns": ["investor_id"]}}
+{"query": "what are the names of all songs that are in mp3 format and have a resolution lower than 1000?", "intent": "question", "entities": {"operation": "query", "columns": ["resolution", "song_name", "formats"]}}
+{"query": "how many wines are there for each grape?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "grape"]}}
+{"query": "how many bangladeshi artists are listed?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "country"]}}
+{"query": "show the pair of male and female names in all weddings after year 2014", "intent": "question", "entities": {"operation": "query", "columns": ["name", "year"]}}
+{"query": "find the the grape whose white color grapes are used to produce wines with scores higher than 90.", "intent": "question", "entities": {"operation": "query", "columns": ["color", "distinct"]}}
+{"query": "list the names of all the distinct product names in alphabetical order?", "intent": "question", "entities": {"operation": "query", "columns": ["product_name", "distinct"]}}
+{"query": "list the most common type of competition.", "intent": "question", "entities": {"operation": "query", "columns": ["count", "competition_type"]}}
+{"query": "what are the chip model and screen mode of the phone with hardware model name \"lg-p760\"?", "intent": "question", "entities": {"operation": "query", "columns": ["chip_model", "hardware_model_name"]}}
+{"query": "which city does the student whose last name is \"kim\" live in?", "intent": "question", "entities": {"operation": "query", "columns": ["city_code", "lname"]}}
+{"query": "fetch me the most cited publications for artificial intelligence", "intent": "analysis", "entities": {"operation": "group", "columns": ["citingpaperid", "keyphrasename", "distinct", "count", "citedpaperid"]}}
+{"query": "how many employees do we have?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find all movies about nuclear weapons", "intent": "question", "entities": {"operation": "query", "columns": ["keyword", "title"]}}
+{"query": "list every album ordered by album title in ascending order.", "intent": "question", "entities": {"operation": "query", "columns": ["title"]}}
+{"query": "what is the name of every college in alphabetical order that has more than 18000 students enrolled?", "intent": "analysis", "entities": {"operation": "sort", "columns": ["cname", "enr"]}}
+{"query": "find the ids of orders whose status is 'success'.", "intent": "question", "entities": {"operation": "query", "columns": ["actual_order_id", "order_status_code"]}}
+{"query": "what is the length of the colorado river in texas", "intent": "question", "entities": {"operation": "query", "columns": ["length", "river_name"]}}
+{"query": "return the category code and typical price of 'cumin'.", "intent": "question", "entities": {"operation": "query", "columns": ["product_name", "product_category_code"]}}
+{"query": "show the train name and station name for each train.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what is the total enrollment number of all colleges?", "intent": "question", "entities": {"operation": "sum", "columns": ["sum", "enr"]}}
+{"query": "what are the names of actors who have been in the musical titled the phantom of the opera?", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "show the names of members and the location of performances they attended in ascending alphabetical order of their names.", "intent": "analysis", "entities": {"operation": "sort", "columns": ["name"]}}
+{"query": "how many distinct allergies are there?", "intent": "question", "entities": {"operation": "count", "columns": ["count"]}}
+{"query": "find the first names of teachers whose email address contains the word \"man\".", "intent": "question", "entities": {"operation": "query", "columns": ["first_name", "email_address"]}}
+{"query": "what state has the largest capital", "intent": "question", "entities": {"operation": "query", "columns": ["population", "max", "state_name"]}}
+{"query": "show the delegates and the names of the party they belong to.", "intent": "question", "entities": {"operation": "query", "columns": ["delegate"]}}
+{"query": "who are all the co-authors of noah a smith ?", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "what are the first name and last name of all the instructors?", "intent": "question", "entities": {"operation": "query", "columns": ["fname", "rank"]}}
+{"query": "how many budget record has a budget amount smaller than the invested amount?", "intent": "question", "entities": {"operation": "count", "columns": ["count", "budgeted"]}}
+{"query": "list the creation year, name and budget of each department.", "intent": "question", "entities": {"operation": "query", "columns": ["creation"]}}
+{"query": "find the titles of all movies directed by steven spielberg.", "intent": "question", "entities": {"operation": "query", "columns": ["director", "title"]}}
+{"query": "list the name of physicians who took some appointment.", "intent": "question", "entities": {"operation": "query", "columns": ["name"]}}
+{"query": "what is the average number of points for players from the \"aib\" club?", "intent": "question", "entities": {"operation": "average", "columns": ["name", "points", "avg"]}}
+{"query": "show the location code of the country \"canada\".", "intent": "question", "entities": {"operation": "query", "columns": ["location_code", "location_name"]}}
+{"query": "show the advisors of the students whose city of residence has city code \"bal\".", "intent": "question", "entities": {"operation": "query", "columns": ["advisor", "city_code"]}}
+{"query": "what is the minimum, mean, and maximum age across all students?", "intent": "question", "entities": {"operation": "max", "columns": ["min", "age"]}}
+{"query": "find the most popular room in the hotel. the most popular room is the room that had seen the largest number of reservations.", "intent": "question", "entities": {"operation": "query", "columns": ["roomname", "count", "room"]}}
+{"query": "show the locations that have more than one railways.", "intent": "question", "entities": {"operation": "query", "columns": ["location"]}}
+{"query": "sharon goldwater 's papers", "intent": "question", "entities": {"operation": "query", "columns": ["authorname", "distinct"]}}
+{"query": "find the number of patients' prescriptions physician john dorian made.", "intent": "question", "entities": {"operation": "count", "columns": ["count", "name", "ssn"]}}
